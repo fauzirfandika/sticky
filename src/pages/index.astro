@@ -37,7 +37,5 @@ import Count from '../scripts/countdown.astro'
 <script src="../scripts/modal.js"></script>
 
 <script>
-  import { getPlatformProxy } from "wrangler";
-  const { env } = await getPlatformProxy();
   console.log(`MY_LAST_NAME = ${env.MY_LAST_NAME}`);
 </script>
