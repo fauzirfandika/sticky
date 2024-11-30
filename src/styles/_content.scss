@@ -95,25 +95,16 @@
   #wdt {
     @include ref.flexcont(column, center, normal);
     width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     text-align: center;
-    gap: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    h3, p{
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    p {
-      letter-spacing: 0.2rem;
-      font-size: 0.8rem;
-    }
+    gap: 3rem;
     .wdt-info {
-      padding: 0.5rem 0;
       display: flex; 
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 0.25rem;
+      gap: 1rem;
     }
     img {
       margin-bottom: 0.7rem;
@@ -125,48 +116,52 @@
       text-transform: lowercase;
     }
     #wdt-waktu {
-      text-align: center;
-      p {
-        font-size: 1rem;
+      .p2 {
+        font-size: 1.25rem;
+      }
+      #ctd {
+        #cds {
+          @include ref.flexcont(row, space-between, center);
+          width: 100%;
+          padding: 0 20%!important;
+          margin-bottom: 0.2rem;
+          p {
+            text-align: center;
+            font-size: 1.25rem;
+            letter-spacing: 0;
+            span {font-size: 0.75rem;}
+          }
+        }
+        .p2 {
+          font-size: 1rem;
+          letter-spacing: .125rem;
+        }
       }
     }
     #wdt-tempat {
       text-align: center;
       #peta {
         width: 100%;
-        max-width: 600px;
+        max-width: 300px;
         height: auto;
         border-radius: 10px;
       }
     }
-    #ctd {
-      text-align: center;
-      p {
-        text-align: center;
-        font-size: .75rem;
-      }
-      #cds {
-        @include ref.flexcont(row, space-between, center);
-        width: 100%;
-        padding: 0 20%!important;
-        margin-bottom: 0.2rem;
-        p {
-          text-align: center;
-          font-size: 1.25rem;
-          letter-spacing: 0;
-          span {font-size: 12px;}
-        }
-      }
-
-    }
-
   }
 
   #closing {
-    font-size: 12px;
+    @include ref.flexcont(column, center, center);
+    gap: 3rem;
     text-align: center;
-    padding-bottom: 10%;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+    div {
+    @include ref.flexcont(column, center, center);
+    gap: 1rem;
+      img {
+        width: 3rem;
+      }
+    }
   }
-
 }
 
