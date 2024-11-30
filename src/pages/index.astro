@@ -7,22 +7,7 @@ import Content from '../components/content.astro'
 import Fonts from '../components/fonts.astro'
 //scripts
 import Count from '../scripts/countdown.astro'
-
-//fetch
-const nocoapi = import.meta.env.SECRET_NOCOAPI;
-const nocotok = import.meta.env.SECRET_NOCO;
-const nocoopt = {
-	method: 'GET',
-	headers: {
-  'xc-token': nocotok
-  }
-};
-
-const data = await fetch(nocoapi, nocoopt).then((response) =>
-  response.json()
-);
-
-console.log(data);
+import Noco from '../scripts/fetch.astro'
 
 ---
 <!doctype html>
@@ -51,4 +36,8 @@ console.log(data);
 </html>
 
 <Count/>
+<Noco/>
 <script src="../scripts/modal.js"></script>
+
+<script>
+</script>
