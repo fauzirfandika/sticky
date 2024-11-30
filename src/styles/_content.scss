@@ -6,7 +6,7 @@
 }
 
 #hero {
-  background: linear-gradient(#00000000 50%,rgba(255, 254, 247, 1)), url(images/hero-01.jpg) ;
+  background: linear-gradient(#00000000 50%,rgba(255, 254, 247, 1)), url(/images/hero-01.jpg) ;
   @include ref.background-cover;
   @include ref.flexcont(column, space-between, center);
   overflow-x: hidden;
@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #content {
-  background: linear-gradient(rgba(255, 254, 247, 1),rgba(255, 254, 247, 0.4)  10%), url(images/paper-texture.jpg) ;
+  background: linear-gradient(rgba(255, 254, 247, 1),rgba(255, 254, 247, 0.4)  10%), url(/images/paper-texture.jpg) ;
   @include ref.background-cover;
   @include ref.flexcont(column, center, center);
   overflow-x: hidden;

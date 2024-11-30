@@ -25,7 +25,7 @@
 // }
 
 .modal {
-  background: url(images/bg-01.png), #ffffff;
+  background: url(/images/bg-01.png), #ffffff;
   @include ref.background-cover;
   @include ref.flexcont(column, space-between, center);
   position: fixed;
