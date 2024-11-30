@@ -1,0 +1,89 @@
+@mixin petals1 ($inittop, $initleft, $duration, $delay) {
+    top: $inittop;
+    left: $initleft;
+    animation: petals1 $duration linear infinite;
+    animation-delay: $delay;
+}
+@mixin petals2 ($inittop, $initleft, $duration, $delay) {
+    top: $inittop;
+    left: $initleft;
+    animation: petals2 $duration linear infinite;
+    animation-delay: $delay;
+}
+.petals {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+  z-index: 2;
+  div {
+    position: absolute;
+    display: block;
+
+    &:nth-child(1){@include  petals1 ( -10vh, -40vw, 37.5s, 0s)}
+    &:nth-child(2){@include  petals2 ( -10vh, -30vw, 30s, 7.5s)}
+    &:nth-child(3){@include  petals1 ( -10vh, -20vw, 30s, 15s)}
+    &:nth-child(4){@include  petals2 ( -10vh, -10vw, 22.5s, -7.5s)}
+    &:nth-child(5){@include  petals1 ( -10vh,   0vw, 30s, 0s)}
+    &:nth-child(6){@include  petals2 ( -10vh,  10vw, 30s, 7.5s)}
+    &:nth-child(7){@include  petals1 ( -10vh,  20vw, 30s, 15s)}
+    &:nth-child(8){@include  petals2 ( -10vh,  30vw, 37.5s, -7.5s)}
+    &:nth-child(9){@include  petals1 ( -10vh,  40vw, 30s, 0s)}
+  }
+}
+
+
+@keyframes petals1 {
+  0% {
+    opacity: 0%;
+    transform: translateX(0px) rotate(0deg);
+  }
+  10% {
+    opacity: 100%;
+  }
+  45% {
+    transform: translateX(47px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  55% {
+    transform: translateX(47px);
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    top: 100vh;
+    transform: translateX(0px) rotate(360deg);
+  }
+}
+@keyframes petals2 {
+  0% {
+    opacity: 0%;
+    transform: translateX(0px) rotate(0deg);
+  }
+  10% {
+    opacity: 100%;
+  }
+  45% {
+    transform: translateX(-47px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  55% {
+    transform: translateX(-47px);
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    top: 100vh;
+    transform: translateX(0px) rotate(-360deg);
+  }
+}

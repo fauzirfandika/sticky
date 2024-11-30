@@ -1,0 +1,172 @@
+@use 'ref';
+@use 'var';
+
+.fixed {
+  position: fixed;
+}
+
+#hero {
+  background: linear-gradient(#00000000 50%,rgba(255, 254, 247, 1)), url(images/hero-01.jpg) ;
+  @include ref.background-cover;
+  @include ref.flexcont(column, space-between, center);
+  overflow-x: hidden;
+  text-align: center;
+  // position: sticky;
+  z-index: -1;
+  bottom: 0;
+  padding: 12.5% 5%;
+  #hero-title {
+    @include ref.flexcont(column, center, center);
+    .p2 {letter-spacing: .25rem;}
+    .nf-logo {margin-bottom: 1rem;}
+  }
+  #hero-ayat {
+    @include ref.flexcont(column, end, center);
+    font-size: 0.75rem;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#content {
+  background: linear-gradient(rgba(255, 254, 247, 1),rgba(255, 254, 247, 0.4)  10%), url(images/paper-texture.jpg) ;
+  @include ref.background-cover;
+  @include ref.flexcont(column, center, center);
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding: 0 5%;
+
+  #c-mempelai {
+    @include ref.flexcont(column, center, normal);
+    position: relative;
+    padding: 0 5%;
+    height: 112.5vh;
+    width: 100vw;
+
+
+    .cm-decor {
+      width: 80%;
+      max-width: 500px;
+      height: auto;
+      position: absolute;
+    }
+    #cm-decor1 {
+      left: -10vw;
+      top: 5%;
+      transform: rotate(300deg);
+    }
+    #cm-decor2 {
+      right: -10vw;
+      bottom: 5%;
+      transform: rotate(300deg);
+    }
+
+    #cm-nabila, #cm-fauzi {
+      @include ref.flexcont(row, center, center);
+      height: 25%;
+      gap: 2rem;
+      .profpic {
+        width: 35%;
+        height: auto;
+        border: 1px solid var.$black;
+        border-radius: 1000px;
+      }
+    }
+    #cm-nabila-txt {
+      @include ref.flexcont(column, center, center);
+      z-index: 1;
+      text-align: right;
+    }
+    #cm-fauzi-txt {
+      @extend #cm-nabila-txt;
+      text-align: left;
+    }
+
+
+    p {
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    span {
+      font-weight: 100;
+    }
+  }
+
+  #wdt {
+    @include ref.flexcont(column, center, normal);
+    width: 100%;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    h3, p{
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    p {
+      letter-spacing: 0.2rem;
+      font-size: 0.8rem;
+    }
+    .wdt-info {
+      padding: 0.5rem 0;
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    img {
+      margin-bottom: 0.7rem;
+      width: 24px;
+      height: 24px;
+    }
+    #wdt-dan {
+      font-weight: 100;
+      text-transform: lowercase;
+    }
+    #wdt-waktu {
+      text-align: center;
+      p {
+        font-size: 1rem;
+      }
+    }
+    #wdt-tempat {
+      text-align: center;
+      #peta {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+    #ctd {
+      text-align: center;
+      p {
+        text-align: center;
+        font-size: .75rem;
+      }
+      #cds {
+        @include ref.flexcont(row, space-between, center);
+        width: 100%;
+        padding: 0 20%!important;
+        margin-bottom: 0.2rem;
+        p {
+          text-align: center;
+          font-size: 1.25rem;
+          letter-spacing: 0;
+          span {font-size: 12px;}
+        }
+      }
+
+    }
+
+  }
+
+  #closing {
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10%;
+  }
+
+}
+

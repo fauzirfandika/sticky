@@ -1,0 +1,88 @@
+@mixin flexcont ($dir:column, $jc:center, $at:center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $at;
+}
+
+@mixin background-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@font-face{
+  font-family: babyGio;
+  src: url(../fonts/baby-giovani/BabyGiovaniScript.ttf),
+  url(../fonts/baby-giovani/BabyGiovaniScript-Italic.ttf);
+}
+
+:root {
+  font-size: 16px;
+  font-family: Garamond, serif;
+  text-transform: none;
+}
+
+h1 {
+  font-family: "babyGio", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h2, h3 {
+font-family: "Playfair Display", serif;
+}
+
+.p2 {
+  @extend :root;
+  text-transform: uppercase;
+}
+
+
+.txt-n {
+  font-weight: 400;
+}
+.txt-b {
+  font-weight: 600;
+}
+.txt-i {
+  font-style: italic;
+}
+
+img {
+  pointer-events: none;
+}
+
+.wh-100 {
+  height: 100vh;
+  width: 100vw;
+  @supports (height: 100svh) {
+    height: 100svh;
+  }
+}
+
+.nf-logo {
+  width: 64px;
+  height: 64px;
+}
+
+.button {
+  background: rgba(255,255,255,0.6);
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 30px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}

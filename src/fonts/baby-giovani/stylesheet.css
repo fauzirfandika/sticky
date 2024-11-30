@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Baby Giovani Script';
+    src: url('BabyGiovaniScript-Italic.eot');
+    src: local('Baby Giovani Script Italic'), local('BabyGiovaniScript-Italic'),
+        url('BabyGiovaniScript-Italic.eot?#iefix') format('embedded-opentype'),
+        url('BabyGiovaniScript-Italic.woff2') format('woff2'),
+        url('BabyGiovaniScript-Italic.woff') format('woff'),
+        url('BabyGiovaniScript-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Baby Giovani Script';
+    src: url('BabyGiovaniScript.eot');
+    src: local('Baby Giovani Script'), local('BabyGiovaniScript'),
+        url('BabyGiovaniScript.eot?#iefix') format('embedded-opentype'),
+        url('BabyGiovaniScript.woff2') format('woff2'),
+        url('BabyGiovaniScript.woff') format('woff'),
+        url('BabyGiovaniScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

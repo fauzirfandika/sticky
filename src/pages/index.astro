@@ -1,0 +1,52 @@
+---
+//import '../styles/global.scss'
+
+import '../styles/main.scss'
+import Cover from '../components/cover.astro'
+import Content from '../components/content.astro'
+import Fonts from '../components/fonts.astro'
+
+import Count from '../scripts/countdown.astro'
+import Animation from '../scripts/scroll.astro'
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <Fonts/>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Nabila Fauzi</title>
+  </head>
+
+  <body>
+  <audio id="audio" loop>
+    <source src="brad-mehldau_blackbird.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+    <div>
+      <Cover namaUndangan="Bapak Fauzi Irfandika"/>
+      <Content/>
+    </div>
+  </body>
+
+</html>
+
+<Count/>
+<script>
+var modal = document.getElementById("cover");
+var btn = document.getElementById("mybutt");
+var mus = document.getElementById("audio");
+
+mus.volume = 0.5;
+
+btn.onclick = function() {
+  modal.style.top = "-110lvh";
+  document.getElementById("hero").classList.remove("fixed");
+  document.getElementById("content").classList.remove("fixed");
+  mus.play();
+}
+</script>
+
+<!--<Animation/>

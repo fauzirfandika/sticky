@@ -1,0 +1,17 @@
+@use 'cover';
+@use 'content';
+@use 'petals';
+@use 'ref';
+@use 'var';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  text-decoration: none;
+  color: var.$black;
+}
+
+html {
+}

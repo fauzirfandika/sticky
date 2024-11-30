@@ -1,0 +1,34 @@
+---
+//import '../styles/global.scss'
+
+import '../styles/main.scss'
+import Cover from '../components/cover.astro'
+import Content from '../components/content.astro'
+import Fonts from '../components/fonts.astro'
+
+import Count from '../scripts/countdown.astro'
+import Animation from '../scripts/scroll.astro'
+
+const { undangan }= Astro.params;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <Fonts/>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Nabila Fauzi</title>
+  </head>
+
+  <body>
+    <div>
+      <Cover namaUndangan={undangan}/>
+      <Content/>
+    </div>
+  </body>
+</html>
+
+<Count/>
+<!--<Animation/>-->
