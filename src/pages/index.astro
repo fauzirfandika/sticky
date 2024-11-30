@@ -37,7 +37,5 @@ import Count from '../scripts/countdown.astro'
 <script src="../scripts/modal.js"></script>
 
 <script>
-  const { env } = Astro.locals.runtime;
-  const test = env.MY_LAST_NAME;
-  console.log(test);
+  console.log(`MY_LAST_NAME = ${env.MY_LAST_NAME}`);
 </script>
