@@ -7,7 +7,6 @@ import Content from '../components/content.astro'
 import Fonts from '../components/fonts.astro'
 
 import Count from '../scripts/countdown.astro'
-import Animation from '../scripts/scroll.astro'
 ---
 <!doctype html>
 <html lang="en">
@@ -39,14 +38,9 @@ var modal = document.getElementById("cover");
 var btn = document.getElementById("mybutt");
 var mus = document.getElementById("audio");
 
-mus.volume = 0.5;
-
 btn.onclick = function() {
   modal.style.top = "-110lvh";
   document.getElementById("hero").classList.remove("fixed");
   document.getElementById("content").classList.remove("fixed");
-  mus.play();
 }
 </script>
-
-<!--<Animation/>
