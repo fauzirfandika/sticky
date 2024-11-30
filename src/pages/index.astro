@@ -1,4 +1,16 @@
 ---
+const { env } = Astro.locals.runtime;
+const nocotoken = env.NOCODE_TOKEN;
+const nocopt = {
+method: 'GET',
+headers: {
+'xc-token': nocotoken
+}
+};
+
+const data = await fetch('https://app.nocodb.com/api/v2/tables/m7w29ys11yjrtsv/records', nocopt).then(response => response.json());
+console.log(data);
+
 //styles
 import '../styles/main.scss'
 import Cover from '../components/cover.astro'
@@ -7,6 +19,8 @@ import Content from '../components/content.astro'
 import Fonts from '../components/fonts.astro'
 //scripts
 import Count from '../scripts/countdown.astro'
+
+
 ---
 <!doctype html>
 <html lang="en">
@@ -35,3 +49,5 @@ import Count from '../scripts/countdown.astro'
 
 <Count/>
 <script src="../scripts/modal.js"></script>
+<script>
+</script>
