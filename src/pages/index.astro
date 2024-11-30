@@ -1,11 +1,11 @@
 ---
-//import '../styles/global.scss'
-
+//styles
 import '../styles/main.scss'
 import Cover from '../components/cover.astro'
+//components
 import Content from '../components/content.astro'
 import Fonts from '../components/fonts.astro'
-
+//scripts
 import Count from '../scripts/countdown.astro'
 ---
 <!doctype html>
@@ -33,14 +33,4 @@ import Count from '../scripts/countdown.astro'
 </html>
 
 <Count/>
-<script>
-var modal = document.getElementById("cover");
-var btn = document.getElementById("mybutt");
-var mus = document.getElementById("audio");
-
-btn.onclick = function() {
-  modal.style.top = "-110lvh";
-  document.getElementById("hero").classList.remove("fixed");
-  document.getElementById("content").classList.remove("fixed");
-}
-</script>
+<script src="../scripts/modal.js"></script>

@@ -1,14 +1,14 @@
 ---
-//import '../styles/global.scss'
-
+//styles
 import '../styles/main.scss'
 import Cover from '../components/cover.astro'
+//components
 import Content from '../components/content.astro'
 import Fonts from '../components/fonts.astro'
-
+//scripts
 import Count from '../scripts/countdown.astro'
-import Animation from '../scripts/scroll.astro'
 
+//astro
 const { undangan }= Astro.params;
 ---
 <!doctype html>
@@ -23,12 +23,17 @@ const { undangan }= Astro.params;
   </head>
 
   <body>
+  <audio id="audio" loop>
+    <source src="brad-mehldau_blackbird.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
     <div>
       <Cover namaUndangan={undangan}/>
       <Content/>
     </div>
   </body>
+
 </html>
 
 <Count/>
-<!--<Animation/>-->
+<script src="../scripts/modal.js"></script>
