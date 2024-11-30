@@ -8,6 +8,10 @@ export default defineConfig({
     imageService:'cloudflare',
     platformProxy: {
       enabled: true,
+      configPath: {
+        'wrangler.json',
+        '.dev.vars',
+      },
     },
   }),
 });
