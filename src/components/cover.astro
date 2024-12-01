@@ -1,12 +1,12 @@
 ---
-const { namaUndangan } = Astro.props;
+const { namatamu } = Astro.props;
 ---
 
 <div id="cover" class="modal wh-100">
 
     <div id="cover-undangan" class="cover-item">
       <p class="">Kepada Yth.</p>
-      <div id="nama-undangan" class="txt-b">{namaUndangan}</div>
+      <div id="nama-undangan" class="txt-b"><slot/></div>
     </div>
 
     <div id="cover-title" class="cover-item">

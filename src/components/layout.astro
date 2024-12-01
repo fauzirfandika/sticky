@@ -1,0 +1,40 @@
+---
+//styles
+import '../styles/main.scss'
+
+//components
+import Head from './head.astro'
+import Cover from './cover.astro'
+import Content from './content.astro'
+
+//scripts
+import Count from '../scripts/countdown.astro'
+
+//astro
+---
+
+<!doctype html>
+<html lang="en">
+  <Head/>
+
+  <body>
+    <button id="audio-stop" class="button" type="button"><img src="/images/music.svg" alt=""></button>
+
+    <audio id="audio" loop>
+      <source src="brad-mehldau_blackbird.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div id="mainbody">
+      <Cover>
+      <slot/>
+      </Cover>
+      <Content/>
+    </div>
+
+  </body>
+</html>
+
+<Count/>
+<script src="../scripts/modal.js"></script>
+
