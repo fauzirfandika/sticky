@@ -1,0 +1,6 @@
+name = "webinvitiation"
+
+[[d1_database]]
+binding = "DB"
+database_name = "tamu-undangan"
+database_id = "0d3a0ad2-ff58-493e-8c7c-0ab948df110e"
