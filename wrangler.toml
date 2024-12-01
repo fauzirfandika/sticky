@@ -2,3 +2,7 @@ name = "webinvitation"
 compatibility_date = "2024-11-30"
 pages_build_output_dir = "./dist"
 
+[[d1_database]]
+binding = "DB"
+database_name = "webinvitation"
+database_id = "16d7ed77-3df4-42a0-8734-d69de19fe83f"
