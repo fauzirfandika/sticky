@@ -8,8 +8,13 @@ export default defineConfig({
   adapter: cloudflare({
     imageService:'cloudflare',
     platformProxy: {
+<<<<<<< HEAD
       enabled: true,
       configPath: 'wrangler.toml',
     },
+=======
+      enabled: true
+    }
+>>>>>>> main
   })
 });

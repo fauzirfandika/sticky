@@ -3,18 +3,49 @@
 
 .fixed {
   position: fixed;
+  top: 0;
+  left: 0;
 }
+
+.det-info {
+  @include ref.flexcont(column, center, center);
+  gap: .5rem;
+  text-align: center;
+  font-size: 1rem;
+  img {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: .25rem;
+  }
+}
+
+#audio-stop {
+  padding: 0;
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  bottom: 2vh;
+  left: 2vw;
+  z-index: 1;
+  img {
+    max-width: 1rem;
+    max-height: 1rem;
+  }
+}
+
+
 
 #hero {
   background: linear-gradient(#00000000 50%,rgba(255, 254, 247, 1)), url(/images/hero-01.jpg) ;
   @include ref.background-cover;
   @include ref.flexcont(column, space-between, center);
+  padding: 12.5% 5%;
   overflow-x: hidden;
   text-align: center;
   // position: sticky;
   z-index: -1;
   bottom: 0;
-  padding: 12.5% 5%;
+  margin-bottom: 10vh;
   #hero-title {
     @include ref.flexcont(column, center, center);
     .p2 {letter-spacing: .25rem;}
@@ -27,141 +58,120 @@
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#content {
-  background: linear-gradient(rgba(255, 254, 247, 1),rgba(255, 254, 247, 0.4)  10%), url(/images/paper-texture.jpg) ;
-  @include ref.background-cover;
-  @include ref.flexcont(column, center, center);
-  overflow-x: hidden;
-  min-height: 100vh;
-  padding: 0 5%;
-
-  #c-mempelai {
-    @include ref.flexcont(column, center, normal);
-    position: relative;
-    padding: 0 5%;
-    height: 112.5vh;
-    width: 100vw;
-
-
-    .cm-decor {
-      width: 80%;
-      max-width: 500px;
+#c-mempelai {
+  @include ref.flexcont(column, space-between, normal);
+  padding: 35% 5%;
+  overflow: hidden;
+  position: relative;
+  gap: 5rem;
+  .cm-decor {
+    width: 60%;
+    max-width: 350px;
+    position: absolute;
+  }
+  #cm-decor1 {
+    left: -10vw;
+    top: 0;
+  }
+  #cm-decor2 {
+    right: -10vw;
+    bottom: 0;
+  }
+  #cm-nabila, #cm-fauzi {
+    @include ref.flexcont(row, center, center);
+    height: 25%;
+    gap: 2rem;
+    .profpic {
+      width: 35%;
       height: auto;
-      position: absolute;
+      border: 1px solid var.$black;
+      border-radius: 1000px;
     }
-    #cm-decor1 {
-      left: -10vw;
-      top: 5%;
-      transform: rotate(300deg);
-    }
-    #cm-decor2 {
-      right: -10vw;
-      bottom: 5%;
-      transform: rotate(300deg);
-    }
-
-    #cm-nabila, #cm-fauzi {
-      @include ref.flexcont(row, center, center);
-      height: 25%;
-      gap: 2rem;
-      .profpic {
-        width: 35%;
-        height: auto;
-        border: 1px solid var.$black;
-        border-radius: 1000px;
-      }
-    }
-    #cm-nabila-txt {
-      @include ref.flexcont(column, center, center);
-      z-index: 1;
-      text-align: right;
-    }
-    #cm-fauzi-txt {
-      @extend #cm-nabila-txt;
-      text-align: left;
-    }
-
-
+  }
+  #cm-nabila-txt {
+    @include ref.flexcont(column, center, center);
+    z-index: 1;
+    text-align: right;
     p {
-      font-size: 11px;
-      letter-spacing: 2px;
-    }
-    span {
-      font-weight: 100;
+      font-size: .80rem;
+      letter-spacing: .125rem;
     }
   }
-
-  #wdt {
-    @include ref.flexcont(column, center, normal);
-    width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    text-align: center;
-    gap: 3rem;
-    .wdt-info {
-      display: flex; 
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
-    img {
-      margin-bottom: 0.7rem;
-      width: 24px;
-      height: 24px;
-    }
-    #wdt-dan {
-      font-weight: 100;
-      text-transform: lowercase;
-    }
-    #wdt-waktu {
-      .p2 {
-        font-size: 1.25rem;
-      }
-      #ctd {
-        #cds {
-          @include ref.flexcont(row, space-between, center);
-          width: 100%;
-          padding: 0 20%!important;
-          margin-bottom: 0.2rem;
-          p {
-            text-align: center;
-            font-size: 1.25rem;
-            letter-spacing: 0;
-            span {font-size: 0.75rem;}
-          }
-        }
-        .p2 {
-          font-size: 1rem;
-          letter-spacing: .125rem;
-        }
-      }
-    }
-    #wdt-tempat {
-      text-align: center;
-      #peta {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        border-radius: 10px;
-      }
-    }
+  #cm-fauzi-txt {
+    @extend #cm-nabila-txt;
+    text-align: left;
   }
+}
 
-  #closing {
-    @include ref.flexcont(column, center, center);
-    gap: 3rem;
-    text-align: center;
-    padding-bottom: 2rem;
-    padding-top: 3rem;
-    div {
-    @include ref.flexcont(column, center, center);
-    gap: 1rem;
-      img {
-        width: 3rem;
-      }
+#c-gallery {
+  @include ref.c-margin;
+  @include ref.c-padding;
+  @include ref.flexcont(column, center, center);
+  margin-top: 0;
+  text-align: center;
+  #gallery-wrapper {
+    overflow-x: hidden;
+    width: min(1000px, 100%);
+    columns: 4 20vw;
+    column-gap: .25rem;
+    img{
+      display: block;
+      margin-bottom: .25rem;
     }
   }
 }
 
+
+#c-waktu {
+  @include ref.flexcont(column, space-between, center, 2.5rem);
+  @include ref.c-padding;
+  @include ref.c-margin;
+  width: 100%;
+  overflow-x: hidden;
+  text-align: center;
+  #ctd {
+    @include ref.flexcont(column, center, center);
+    overflow-x: hidden;
+    text-align: center;
+    #cds {
+      @include ref.flexcont(row, space-between, center);
+      width: 200px;
+      p {span {font-size: 0.75rem;}}
+    }
+  }
+}
+
+#c-tempat {
+  @include ref.flexcont(column, space-between, center, 2.5rem);
+  @include ref.c-padding;
+  @include ref.c-margin;
+  width: 100%;
+  overflow-x: hidden;
+  text-align: center;
+  img {
+    width: 4rem;
+  }
+    #peta {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
+}
+
+#c-penutup {
+  @include ref.flexcont(column, center, center, 3rem);
+  @include ref.c-padding;
+  @include ref.c-margin;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+  overflow-x: hidden;
+  div {
+    @include ref.flexcont(column, center, center);
+    gap: 1rem;
+    img {
+      width: 3rem;
+    }
+  }
+}

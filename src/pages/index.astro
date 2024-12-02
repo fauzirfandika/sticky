@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 //styles
 import '../styles/main.scss'
 import Cover from '../components/cover.astro'
@@ -7,31 +8,17 @@ import Content from '../components/content.astro'
 import Fonts from '../components/fonts.astro'
 //scripts
 import Count from '../scripts/countdown.astro'
+=======
+import Layout from '../layouts/layout.astro'
+import Count from '/src/scripts/ctds.astro'
+>>>>>>> main
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <Fonts/>
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Nabila Fauzi</title>
-  </head>
-
-  <body>
-    <button id="audio-stop" class="button" type="button"><img src="/images/music.svg" alt=""></button>
-    <audio id="audio" loop>
-      <source src="brad-mehldau_blackbird.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div>
-      <Cover namaUndangan="Bapak Fauzi Irfandika"/>
-      <Content/>
-    </div>
-  </body>
-
-</html>
-
+<Layout>
+  <Fragment slot="namaundangan">
+    Tamu Undangan
+  </Fragment>
+  <Fragment slot="wtu">
+    13:00 - 21:00
+  </Fragment>
+</Layout>
 <Count/>
-<script src="../scripts/modal.js"></script>

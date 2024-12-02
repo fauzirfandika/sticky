@@ -1,3 +1,5 @@
+@use './ref';
+
 @mixin petals1 ($inittop, $initleft, $duration, $delay) {
     top: $inittop;
     left: $initleft;
@@ -10,27 +12,36 @@
     animation: petals2 $duration linear infinite;
     animation-delay: $delay;
 }
+
+#petals-container {
+  @include ref.flexcont(column, space-between, normal);
+  @include ref.c-padding;
+  height: 150vh;
+  overflow: hidden;
+  position: absolute;
+  gap: 5rem;
+}
+
 .petals {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 25px;
   height: 25px;
   pointer-events: none;
-  z-index: 2;
+  z-index: 1;
   div {
     position: absolute;
     display: block;
-
-    &:nth-child(1){@include  petals1 ( -10vh, -40vw, 37.5s, 0s)}
-    &:nth-child(2){@include  petals2 ( -10vh, -30vw, 30s, 7.5s)}
-    &:nth-child(3){@include  petals1 ( -10vh, -20vw, 30s, 15s)}
-    &:nth-child(4){@include  petals2 ( -10vh, -10vw, 22.5s, -7.5s)}
-    &:nth-child(5){@include  petals1 ( -10vh,   0vw, 30s, 0s)}
-    &:nth-child(6){@include  petals2 ( -10vh,  10vw, 30s, 7.5s)}
-    &:nth-child(7){@include  petals1 ( -10vh,  20vw, 30s, 15s)}
-    &:nth-child(8){@include  petals2 ( -10vh,  30vw, 37.5s, -7.5s)}
-    &:nth-child(9){@include  petals1 ( -10vh,  40vw, 30s, 0s)}
+    &:nth-child(1){@include  petals1 ( -20vh, 10vw, 37.5s, 0s)}
+    &:nth-child(2){@include  petals2 ( -20vh, 20vw, 30s, 7.5s)}
+    &:nth-child(3){@include  petals1 ( -20vh, 30vw, 30s, 15s)}
+    &:nth-child(4){@include  petals2 ( -20vh, 40vw, 22.5s, -7.5s)}
+    &:nth-child(5){@include  petals1 ( -20vh, 50vw, 30s, 0s)}
+    &:nth-child(6){@include  petals2 ( -20vh, 60vw, 30s, 7.5s)}
+    &:nth-child(7){@include  petals1 ( -20vh, 70vw, 30s, 15s)}
+    &:nth-child(8){@include  petals2 ( -20vh, 80vw, 37.5s, -7.5s)}
+    &:nth-child(9){@include  petals1 ( -20vh, 90vw, 30s, 0s)}
   }
 }
 
@@ -40,7 +51,7 @@
     opacity: 0%;
     transform: translateX(0px) rotate(0deg);
   }
-  10% {
+  20% {
     opacity: 100%;
   }
   45% {
@@ -52,21 +63,22 @@
   55% {
     transform: translateX(47px);
   }
-  90% {
+  80% {
     opacity: 100%;
   }
   100% {
     opacity: 0%;
-    top: 100vh;
+    top: 140vh;
     transform: translateX(0px) rotate(360deg);
   }
 }
+
 @keyframes petals2 {
   0% {
     opacity: 0%;
     transform: translateX(0px) rotate(0deg);
   }
-  10% {
+  20% {
     opacity: 100%;
   }
   45% {
@@ -78,12 +90,12 @@
   55% {
     transform: translateX(-47px);
   }
-  90% {
+  80% {
     opacity: 100%;
   }
   100% {
     opacity: 0%;
-    top: 100vh;
+    top: 140vh;
     transform: translateX(0px) rotate(-360deg);
   }
 }

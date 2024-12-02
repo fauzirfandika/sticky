@@ -1,0 +1,23 @@
+---
+---
+<script>
+  var countDownDate = new Date("Dec 21, 2024 19:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("cds").innerHTML =
+      '<p>' + days + '<br><span>HARI</span></p>' +
+      '<p>' + hours + '<br><span>JAM</span></p>' +
+      '<p>' + minutes + '<br><span>MENIT</span></p>' +
+      '<p>' + seconds + '<br><span>DETIK</span></p>'
+    ;
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("cds").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>

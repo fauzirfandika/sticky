@@ -1,0 +1,30 @@
+---
+import '/src/styles/main.scss'
+import Head from '/src/components/head.astro'
+import Cover from '/src/components/cover.astro'
+import Content from '/src/components/content.astro'
+---
+
+<!doctype html>
+<html lang="en">
+  <Head/>
+
+  <body>
+    <audio id="audio" loop>
+      <source src="/brad-mehldau_blackbird.mp3" type="audio/mpeg">
+    </audio>
+    <button id="audio-stop" type="button"><img src="/images/music.svg" alt=""></button>
+
+    <div id="mainbody">
+      <Cover>
+      <slot name="namaundangan"/>
+      </Cover>
+      <Content>
+        <slot name="wtu"/>
+      </Content>
+    </div>
+  </body>
+</html>
+
+<script src="../scripts/modal.js"></script>
+
