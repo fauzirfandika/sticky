@@ -8,10 +8,15 @@ function togglePlay() {
 };
 
 mdlopen.onclick = function() {
-  modal.style.top = "-110lvh";
+  window.scrollTo(0,0);
   document.getElementById("hero").classList.remove("fixed");
-  document.getElementById("content").classList.remove("fixed");
-  bgaud.play()
+  document.getElementById("petals-container").classList.remove("fixed");
+  document.getElementById("c-mempelai").classList.remove("fixed");
+  document.getElementById("c-waktu").classList.remove("fixed");
+  document.getElementById("c-gallery").classList.remove("fixed");
+  document.getElementById("c-tempat").classList.remove("fixed");
+  document.getElementById("c-penutup").classList.remove("fixed");
+  modal.style.top = "-110lvh";
 }
 
 btnstop.onclick = function () {

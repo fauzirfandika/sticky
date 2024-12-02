@@ -1,0 +1,74 @@
+---
+import Petals from './petalsFront.astro'
+---
+
+<div>
+<div id="hero" class="fixed wh-100">
+  <div id="hero-title">
+    <img class="nf-logo" src="/public/logo_bold.svg" alt="logo">
+    <p class="p2">Pernikahan</p>
+    <h2>Nabila<span class="txt-n txt-i"> & </span>Fauzi</h2>
+  </div>
+  <div id="hero-ayat">
+    "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepad-hanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+    <br>
+    <span class="txt-b">Qs. Ar-Rum 21</span>
+  </div>
+</div>
+
+<!------------------------------------------------------------------------>
+
+<div id="content" class="fixed">
+  <Petals/>
+
+  <div id="c-mempelai" class="">
+    <img class="cm-decor" id="cm-decor1" src="/public/images/flowers/stalk-yel.png" alt="">
+    <img class="cm-decor" id="cm-decor2" src="/public/images/flowers/stalk-red.png" alt="">
+    <div id="cm-nabila">
+      <div id="cm-nabila-txt" class="">
+        <h2>Nabila<br><span>Annisa</span></h2>
+        <p class="p2">Anak pertama dari<br>Bapak Duddy Perkasa<br>dan Ibu Mia Rusmiati</p>
+      </div>
+      <img class="profpic" src="/public/images/Nabila-tr.png" alt="">
+    </div>
+    <div id="cm-fauzi">
+      <img class="profpic" src="/public/images/Fauzi-tr.png" alt="">
+      <div id="cm-fauzi-txt" class="">
+        <h2>Fauzi<br><span>Irfandika</span></h2>
+        <p class="p2">Anak kedua dari<br>Bapak Bakti Ramadhan<br>dan Ibu Yunyun Yuniastuti</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="wdt" class="">
+    <h2>Waktu <span id="wdt-dan">&</span> Tempat</h2>
+    <div id="wdt-waktu" class="wdt-info">
+      <img src="/public/images/calendar.svg" alt="calendar" width="32px" height="32px">
+      <h3>Sabtu<br>21 Desember 2024</h3>
+      <p class="p2"><slot/></p>
+      <hr>
+      <div id="ctd" class="wdt-info">
+        <div id="cds"></div>
+        <p class="p2">Menuju Pernikahan</p>
+      </div>
+    </div>
+    <div id="wdt-tempat" class="wdt-info">
+      <img src="/public/images/location.svg" alt="location" width="32px" height="32px">
+      <h3>Uncle D Space</h3>
+      <p class="p2">Jl. Cigadung Raya Barat no. 28A<br>Cibeunying Kaler, Bandung</p>
+      <hr>
+      <img id="peta" src="/public/images/map.png" alt="">
+      <div class="button"><a href="https://maps.app.goo.gl/bWYPqw5SpdMezy2M8" target="_blank">Buka Peta</a></div>
+    </div>
+  </div>
+
+  <div id="closing" class="">
+    <p>Terima kasih kami ucapkan atas perhatian dan doa anda, kami nantikan kehadirannya pada acara pernikahan kami.</p>
+    <div>
+      <p>tertanda,</p>
+      <img src="/public/logo_bold.svg" alt="">
+      <p class="p2">Keluarga<br>Nabila dan Fauzi</p>
+    </div>
+  </div>
+</div>
+</div>

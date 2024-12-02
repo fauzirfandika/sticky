@@ -14,18 +14,17 @@
 }
 
 html {
+  scroll-snap-type: both mandatory;
 }
 
-#audio-stop {
-  position: fixed;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 2rem;
-  bottom: 2vh;
-  left: 2vw;
-  z-index: 1;
-  img {
-    max-width: 1rem;
-    max-height: 1rem;
-  }
+.snap-container {
+  scroll-snap-type: both mandatory;
+}
+.snap-child {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+body {
+  overflow-x: hidden;
 }

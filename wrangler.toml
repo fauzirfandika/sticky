@@ -1,0 +1,8 @@
+name = "webinvitation"
+compatibility_date = "2024-11-30"
+pages_build_output_dir = "./dist"
+
+[[d1_database]]
+binding = "tamuDB"
+database_name = "tamu-comments"
+database_id = "0d3a0ad2-ff58-493e-8c7c-0ab948df110e"
