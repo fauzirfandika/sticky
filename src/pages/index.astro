@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/layout.astro'
 import Count from '../scripts/ctds.astro'
+import Log from '../scripts/fetch.astro'
 const myAPI = Astro.locals.runtime.env.SECRET_NOCOAPI;
 const myTOK = Astro.locals.runtime.env.SECRET_NOCO;
 ---
@@ -13,4 +14,4 @@ const myTOK = Astro.locals.runtime.env.SECRET_NOCO;
   </Fragment>
 </Layout>
 <Count/>
-<script src="../scripts/fecth.js"></script>
+<Log/>
