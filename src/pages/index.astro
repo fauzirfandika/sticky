@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/layout.astro'
 import Count from '../scripts/ctds.astro'
+
+
+const { env } = Astro.locals.runtime;
 console.log(env.MY_VARIABLE);
 ---
 <Layout>
