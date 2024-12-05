@@ -1,0 +1,13 @@
+const myAPI = Astro.locals.runtime.env.SECRET_NOCOAPI;
+const myTOK = Astro.locals.runtime.env.SECRET_NOCO;
+
+const response = await fetch(`"${myAPI}`,
+  {
+    method: 'POST',
+    headers: {
+    'xc-token': `'${myTOK}'`
+    },
+  });
+
+const json = await response.json();
+console.log(json);
