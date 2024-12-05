@@ -4,11 +4,11 @@ import Count from '../scripts/ctds.astro'
 const myAPI = Astro.locals.runtime.env.SECRET_NOCOAPI;
 const myTOK = Astro.locals.runtime.env.SECRET_NOCO;
 
-const response = await fetch("https://app.nocodb.com/api/v2/tables/m7w29ys11yjrtsv/records",
+const response = await fetch(`"${myAPI}"`,
   {
     method: 'GET',
     headers: {
-    'xc-token': 'RzPMz79xLsGvt0YBpZ-XnQ0YGIBeFtzx10oW-rvT'
+    'xc-token': `'${myTOK}'`
     },
   });
 
