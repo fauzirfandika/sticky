@@ -1,4 +1,10 @@
 ---
+export function GET(context) {
+  const runtime = context.locals.runtime;
+
+  return new Response('Some body');
+}
+
 import Layout from '../layouts/layout.astro'
 import Count from '../scripts/ctds.astro'
 
