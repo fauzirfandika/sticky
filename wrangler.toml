@@ -9,5 +9,3 @@ database_id = "f4da79f9-c6e0-4b18-ae29-4afa036e1b11"
 
 [vars]
 MY_VARIABLE = "test"
-
-

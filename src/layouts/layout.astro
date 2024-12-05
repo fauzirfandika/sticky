@@ -3,6 +3,8 @@ import '../styles/main.scss'
 import Head from '../components/head.astro'
 import Cover from '../components/cover.astro'
 import Content from '../components/content.astro'
+import Form from '../scripts/form.astro'
+const { undangan } = Astro.params;
 ---
 
 <!doctype html>
@@ -15,6 +17,7 @@ import Content from '../components/content.astro'
     </audio>
     <button id="audio-stop" type="button"><img src="/images/music.svg" alt=""></button>
 
+    <Form/>
     <div id="mainbody">
       <Cover>
       <slot name="namaundangan"/>
