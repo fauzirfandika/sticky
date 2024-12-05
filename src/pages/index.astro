@@ -7,14 +7,10 @@ const myVar = Astro.locals.runtime.env.MY_VARIABLE;
 ---
 <Layout>
   <Fragment slot="namaundangan">
-    Tamu Undangan
+    {myVar}
   </Fragment>
   <Fragment slot="wtu">
     13:00 - 21:00
   </Fragment>
 </Layout>
 <Count/>
-
-<script>
-  console.log(myVar);
-</script>
