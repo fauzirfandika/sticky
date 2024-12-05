@@ -13,8 +13,17 @@ const myTOK = Astro.locals.runtime.env.NOCO_TOK;
     connectedCallback() {
       const url = this.dataset.url;
       const tok = this.dataset.tok;
-      console.log(url);
-      console.log(tok);
+      const options = {
+        method: 'GET',
+        headers: {
+          'xc-token': tok
+        }
+      };
+
+      fetch(url, options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
     }
   }
   const response = await fetch("https://app.nocodb.com/api/v2/tables/m7w29ys11yjrtsv/records",
