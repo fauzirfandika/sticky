@@ -2,5 +2,6 @@
 
 interface Env {
 	MY_VARIABLE: "test";
+	DB_PASSWORD: string;
 	TAMU_DB: D1Database;
 }
