@@ -3,6 +3,18 @@ import '../styles/main.scss'
 import Head from '../components/head.astro'
 import Cover from '../components/cover.astro'
 import Content from '../components/content.astro'
+
+
+const response = await fetch(`"${myAPI}`,
+  {
+    method: 'POST',
+    headers: {
+    'xc-token': `'${myTOK}'`
+    },
+  });
+
+const json = await response.json();
+const { film } = json.data;
 ---
 
 <!doctype html>
@@ -10,6 +22,7 @@ import Content from '../components/content.astro'
   <Head/>
 
   <body>
+    <p>{film}</p>
     <audio id="audio" loop>
       <source src="/brad-mehldau_blackbird.mp3" type="audio/mpeg">
     </audio>

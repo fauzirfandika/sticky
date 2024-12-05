@@ -3,21 +3,10 @@ import Layout from '../layouts/layout.astro'
 import Count from '../scripts/ctds.astro'
 const myAPI = Astro.locals.runtime.env.SECRET_NOCOAPI;
 const myTOK = Astro.locals.runtime.env.SECRET_NOCO;
-
-const response = await fetch(`"${myAPI}`,
-  {
-    method: 'POST',
-    headers: {
-    'xc-token': `'${myTOK}'`
-    },
-  });
-
-const json = await response.json();
-const { film } = json.data;
 ---
 <Layout>
   <Fragment slot="namaundangan">
-    {film}
+    Tamu Undangan
   </Fragment>
   <Fragment slot="wtu">
     13:00 - 21:00
