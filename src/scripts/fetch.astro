@@ -3,25 +3,28 @@ const myURL = Astro.locals.runtime.env.NOCO_URL;
 const myTOK = Astro.locals.runtime.env.NOCO_TOK;
 ---
 
-<noco
+<noco-attr
     data-url={myURL}
     data-tok={myTOK}>
-</noco>
+</noco-attr>
 
 <script>
-  class NocoFetch extends HTMLElement {
-    const url = this.dataset.url;
-    const tok = this.dataset.tok;
-    const response = await fetch(url,
-      {
-        method: 'GET',
-        headers: {
-          'xc-token': tok
-        },
-      });
-    const json = await response.json();
-    console.log(json.list[0].namaundangan);
-  };
-  customElements.define('noco', NocoFetch);
+  class NocoTest extends HTMLElement {
+    connectedCallback() {
+      const url = this.dataset.url;
+      const tok = this.dataset.tok;
+      console.log(url);
+    }
+  }
+  const response = await fetch("https://app.nocodb.com/api/v2/tables/m7w29ys11yjrtsv/records",
+    {
+      method: 'GET',
+      headers: {
+        'xc-token': 'RzPMz79xLsGvt0YBpZ-XnQ0YGIBeFtzx10oW-rvT'
+      },
+    });
+  const json = await response.json();
+  console.log(json.list[0].namaundangan);
+  customElements.define('noco-attr', NocoTest);
 </script>
 
