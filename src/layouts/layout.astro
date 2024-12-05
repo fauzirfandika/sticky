@@ -4,6 +4,8 @@ import Head from '../components/head.astro'
 import Cover from '../components/cover.astro'
 import Content from '../components/content.astro'
 
+const myAPI = Astro.locals.runtime.env.SECRET_NOCOAPI;
+const myTOK = Astro.locals.runtime.env.SECRET_NOCO;
 
 const response = await fetch(`"${myAPI}`,
   {
