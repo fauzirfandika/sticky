@@ -3,3 +3,4 @@ export function GET(context) {
 
   return new Response('Some body');
 }
+
