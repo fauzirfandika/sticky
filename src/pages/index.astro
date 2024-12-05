@@ -5,11 +5,11 @@ import Log from '../scripts/fetch.astro'
 const myURL = Astro.locals.runtime.env.NOCO_URL;
 const myTOK = Astro.locals.runtime.env.NOCO_TOK;
 
-  const response = await fetch(myURL,
+const response = await fetch(`${myURL}`,
     {
       method: 'GET',
       headers: {
-        'xc-token': myTOK
+      'xc-token': `${myTOK}`
       },
     });
   const json = await response.json();
