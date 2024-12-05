@@ -1,0 +1,27 @@
+---
+const myURL = Astro.locals.runtime.env.NOCO_URL;
+const myTOK = Astro.locals.runtime.env.NOCO_TOK;
+---
+
+<noco
+    data-url={myURL}
+    data-tok={myTOK}>
+</noco>
+
+<script>
+  class NocoFetch extends HTMLElement {
+    const url = this.dataset.url;
+    const tok = this.dataset.tok;
+    const response = await fetch(url,
+      {
+        method: 'GET',
+        headers: {
+          'xc-token': tok
+        },
+      });
+    const json = await response.json();
+    console.log(json.list[0].namaundangan);
+  };
+  customElements.define('noco', NocoFetch);
+</script>
+
