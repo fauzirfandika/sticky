@@ -1,3 +1,10 @@
 name = "webinvitation"
 compatibility_date = "2024-11-30"
 pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "TAMU_DB"
+database_name = "webinvitation"
+database_id = "f4da79f9-c6e0-4b18-ae29-4afa036e1b11"
+
+
