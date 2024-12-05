@@ -4,7 +4,6 @@ import Count from '../scripts/ctds.astro'
 
 
 const myVar = Astro.locals.runtime.env.MY_VARIABLE;
-console.log(myVar);
 ---
 <Layout>
   <Fragment slot="namaundangan">
@@ -15,3 +14,7 @@ console.log(myVar);
   </Fragment>
 </Layout>
 <Count/>
+
+<script>
+  console.log(myVar);
+</script>
