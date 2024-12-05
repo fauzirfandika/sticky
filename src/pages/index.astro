@@ -2,12 +2,22 @@
 import Layout from '../layouts/layout.astro'
 import Count from '../scripts/ctds.astro'
 import Log from '../scripts/fetch.astro'
-//const myURL = Astro.locals.runtime.env.NOCO_URL;
-//const myTOK = Astro.locals.runtime.env.NOCO_TOK;
+const myURL = Astro.locals.runtime.env.NOCO_URL;
+const myTOK = Astro.locals.runtime.env.NOCO_TOK;
+
+  const response = await fetch(myURL,
+    {
+      method: 'GET',
+      headers: {
+        'xc-token': myTOK
+      },
+    });
+  const json = await response.json();
+  const nama = json.list[0].namaundangan;
 ---
 <Layout>
   <Fragment slot="namaundangan">
-    Tamu Undangan
+    {nama}
   </Fragment>
   <Fragment slot="wtu">
     13:00 - 21:00
