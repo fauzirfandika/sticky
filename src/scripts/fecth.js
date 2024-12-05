@@ -7,4 +7,4 @@ const response = await fetch("https://app.nocodb.com/api/v2/tables/m7w29ys11yjrt
   });
 
 const json = await response.json();
-console.log(json);
+console.log(json.list[0].namaundangan);
