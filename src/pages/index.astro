@@ -3,8 +3,8 @@ import Layout from '../layouts/layout.astro'
 import Count from '../scripts/ctds.astro'
 
 
-const { env } = Astro.locals.runtime.env;
-console.log(env.MY_VARIABLE);
+const { env } = Astro.locals.runtime.env.MY_VARIABLE;
+console.log(env);
 ---
 <Layout>
   <Fragment slot="namaundangan">
