@@ -1,13 +1,16 @@
 ---
-import Layout from '../layouts/layout.astro'
-import Count from '../scripts/ctds.astro'
+import Layout from '../layouts/layout.astro';
+import Form from '../components/form.astro';
+//const res = await fetch (`${Astro.url}api/noco.json`);
+//const data = await res.json();
 ---
 <Layout>
-  <Fragment slot="namaundangan">
+  <Fragment slot="slot-undangan">
     Tamu Undangan
   </Fragment>
-  <Fragment slot="wtu">
+  <Fragment slot="slot-waktu">
     13:00 - 21:00
   </Fragment>
 </Layout>
-<Count/>
+
+<!--<Form/>-->

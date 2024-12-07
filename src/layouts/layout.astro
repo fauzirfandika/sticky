@@ -3,31 +3,32 @@ import '../styles/main.scss'
 import Head from '../components/head.astro'
 import Cover from '../components/cover.astro'
 import Content from '../components/content.astro'
-import Form from '../scripts/form.astro'
-const { undangan } = Astro.params;
+import Count from '../scripts/ctds.astro';
 ---
-
 <!doctype html>
 <html lang="en">
-  <Head/>
+  <head>
+    <Head/>
+  </head>
 
   <body>
+    <button id="audio-stop" type="button"><img src="/images/music.svg" alt=""></button>
+
+    <div id="cover" class="modal wh-100">
+    <Cover>
+      <slot name="slot-undangan"/>
+    </Cover>
+    </div>
+
+    <Content>
+      <slot name="slot-waktu"/>
+    </Content>
+
     <audio id="audio" loop>
       <source src="/brad-mehldau_blackbird.mp3" type="audio/mpeg">
     </audio>
-    <button id="audio-stop" type="button"><img src="/images/music.svg" alt=""></button>
-
-    <Form/>
-    <div id="mainbody">
-      <Cover>
-      <slot name="namaundangan"/>
-      </Cover>
-      <Content>
-        <slot name="wtu"/>
-      </Content>
-    </div>
   </body>
 </html>
 
+<Count/>
 <script src="../scripts/modal.js"></script>
-

@@ -12,12 +12,12 @@
   background-position: center center;
 }
 
-@mixin c-padding {
-  padding: 0 5%;
+@mixin c-padding ($pad:10% 5%) {
+  padding: $pad;
 }
 
-@mixin c-margin {
-  margin: 20% 0;
+@mixin c-margin ($mar:10% 0) {
+  margin: $mar;
 }
 
 @font-face{
@@ -100,4 +100,8 @@ button {
   text-transform: uppercase;
   font-size: .75rem;
   padding: 0 1.5rem;
+}
+
+.hidden {
+  display: none!important;
 }

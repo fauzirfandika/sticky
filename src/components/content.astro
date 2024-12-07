@@ -1,7 +1,10 @@
 ---
 import Petals from './petalsFront.astro'
+import Form from './form.astro'
+import Comments from './comments.astro'
+console.log();
 ---
-  <div id="hero" class="fixed wh-100">
+  <div id="hero" class="hidden wh-100">
     <div id="hero-title">
       <img class="nf-logo" src="/logo_bold.svg" alt="logo">
       <p class="p2">Pernikahan</p>
@@ -15,11 +18,11 @@ import Petals from './petalsFront.astro'
   </div>
 
   <!------------------------------------------------------------------------>
-  <div id="petals-container" class="fixed">
+  <div id="petals-container" class="hidden">
   <Petals/>
   </div>
 
-  <div id="c-mempelai" class="fixed">
+  <div id="c-mempelai" class="hidden">
     <img class="cm-decor" id="cm-decor1" src="/images/flowers/stalk-yel.png" alt="">
     <img class="cm-decor" id="cm-decor2" src="/images/flowers/stalk-red.png" alt="">
     <div id="cm-nabila">
@@ -38,7 +41,7 @@ import Petals from './petalsFront.astro'
     </div>
   </div>
 
-  <div id="c-gallery" class="fixed">
+  <div id="c-gallery" class="hidden">
     <h2><div>Pra</div> Nikah</h2>
     <div id="gallery-wrapper">
       <img width="10vw" src="/gallery/07.jpg" alt="">
@@ -53,7 +56,7 @@ import Petals from './petalsFront.astro'
   </div>
 
 
-  <div id="c-waktu" class="fixed">
+  <div id="c-waktu" class="hidden">
     <h2>Rangkaian<div>Acara</div></h2>
       <div class="det-info">
         <img id="wedring" src="/images/wedding-rings.svg" alt="">
@@ -73,7 +76,7 @@ import Petals from './petalsFront.astro'
       </div>
   </div>
 
-  <div id="c-tempat" class="fixed">
+  <div id="c-tempat" class="hidden">
     <h2>Lokasi<div>Kegiatan</div></h2>
     <div class="det-info">
       <!--<img id="locsvg" src="/images/location.svg" alt="">-->
@@ -86,7 +89,16 @@ import Petals from './petalsFront.astro'
     </div>
   </div>
 
-  <div id="c-penutup" class="fixed">
+  <div id="c-rsvp" class="hidden">
+    <h2>Reservasi<div>Kehadiran</div></h2>
+    <Form server:defer/>
+  </div>
+
+  <div id="c-ucapan" class="hidden">
+    <Comments server:defer/>
+  </div>
+
+  <div id="c-penutup" class="hidden">
     <h2>Terima <div>Kasih</div></h2>
     <p>Terima kasih kami ucapkan atas perhatian dan doa anda, kami nantikan kehadirannya pada acara pernikahan kami.</p>
     <div>

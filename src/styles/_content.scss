@@ -104,8 +104,7 @@
 }
 
 #c-gallery {
-  @include ref.c-margin;
-  @include ref.c-padding;
+  @include ref.c-padding();
   @include ref.flexcont(column, center, center);
   margin-top: 0;
   text-align: center;
@@ -124,8 +123,7 @@
 
 #c-waktu {
   @include ref.flexcont(column, space-between, center, 2.5rem);
-  @include ref.c-padding;
-  @include ref.c-margin;
+  @include ref.c-padding();
   width: 100%;
   overflow-x: hidden;
   text-align: center;
@@ -143,8 +141,7 @@
 
 #c-tempat {
   @include ref.flexcont(column, space-between, center, 2.5rem);
-  @include ref.c-padding;
-  @include ref.c-margin;
+  @include ref.c-padding();
   width: 100%;
   overflow-x: hidden;
   text-align: center;
@@ -161,8 +158,7 @@
 
 #c-penutup {
   @include ref.flexcont(column, center, center, 3rem);
-  @include ref.c-padding;
-  @include ref.c-margin;
+  @include ref.c-padding();
   text-align: center;
   padding-bottom: 2rem;
   padding-top: 3rem;

@@ -1,0 +1,18 @@
+---
+const res = await fetch (`${Astro.url.origin}/api/noco.json`);
+const data = await res.json();
+---
+<h2>Ucapan<div>Kebahagiaan</div></h2>
+<ul>
+  {data.list.map((post) => (
+  <li>
+    <div class="noco-namainit">
+      {post.nama_init}
+    </div>
+    <div class="noco-ucapan">
+      <div class="txt-b">{post.nama}</div>
+      {post.comment}
+    </div>
+  </li>
+  ))}
+</ul>

@@ -1,0 +1,54 @@
+@use 'ref';
+@use 'var';
+
+#c-rsvp {
+  @include ref.flexcont(column, center, center, 1rem);
+  @include ref.c-padding();
+  overflow: hidden;
+  text-align: center;
+  form {
+    @include ref.flexcont(column, center, center, .5rem);
+    .input-height {
+      height: 2rem;
+    }
+  }
+}
+
+#c-ucapan {
+  @include ref.flexcont(column, center, center, 1rem);
+  @include ref.c-padding();
+  h2 {
+    text-align: center;
+  }
+  ul {
+    @include ref.flexcont(column, flex-start, start, .5rem);
+    text-align: left;
+    list-style-type: none;
+    min-height: 10vh;
+    max-height: 50vh;
+    overflow-x: scroll;
+    scroll-snap-type: both mandatory;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    padding:5% 2.5%;
+    li {
+      scroll-snap-align: center;
+      display: grid;
+      grid-template-columns: 15% 80%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2.5% 5%;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      .noco-namainit {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      .noco-ucapan {
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
