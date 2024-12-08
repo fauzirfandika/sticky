@@ -7,6 +7,7 @@ import Comments from './comments.astro'
   <Petals/>
 </div>
 
+<img class="top-flower" src="/images/decor-page-bottom.png" alt="">
 <div id="hero" class="hidden op0 wh-100">
 
   <div id="hero-title" class="">
@@ -21,14 +22,13 @@ import Comments from './comments.astro'
     <p>Nabila <span>&</span> Fauzi</p>
 </div>
 
-  <div id="hero-ayat">
-    <img class="devider-h" src="/images/devider-h.png" alt="devider">
-    <span class="txt-b">Qs. Ar-Rum 21</span>
-    <br>
-    "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepad-hanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
-    <img class="devider-h" src="/images/devider-h.png" alt="devider">
-  </div>
+<img src="/images/devider-h2.png" alt="">
 
+<div id="hero-ayat">
+  <span class="txt-b">Qs. Ar-Rum 21</span>
+  <br>
+  "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepad-hanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+</div>
 
 <div id="c-mempelai" class="hidden op0">
   <img class="cm-decor op0" id="cm-decor1" src="/images/flowers/stalk-yel.png" alt="">
@@ -66,6 +66,8 @@ import Comments from './comments.astro'
   </div>
 </div>
 
+<img src="/images/devider-h2.png" alt="">
+
 <div id="c-waktu" class="hidden op0">
   <div id="c-waktu-title" class="c-title">
     <img src="/images/decoration/rangkaian-left.png" alt="">
@@ -90,6 +92,7 @@ import Comments from './comments.astro'
   <button class="button" type="button"><a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan%20Nabila%20dan%20Fauzi&details&dates=20241221/20241221" target="_blank">Simpan Tanggal</a></button>
 </div>
 
+<img src="/images/devider-h2.png" alt="">
 
 <div id="c-tempat" class="hidden op0">
   <div id="c-tempat-title" class="c-title">
@@ -105,6 +108,13 @@ import Comments from './comments.astro'
   <div></div>
 </div>
 
+<img src="/images/devider-h2.png" alt="">
+
+<div id="c-ucapan" class="hidden op0">
+  <h2>Ucapan<div>dan Doa</div></h2>
+  <Comments server:defer/>
+</div>
+
 <div id="c-rsvp" class="hidden op0">
   <h2>Reservasi<div>Kehadiran</div></h2>
   <Form/>
@@ -112,17 +122,46 @@ import Comments from './comments.astro'
   <img src="/images/decoration/res.png" alt="">
 </div>
 
-<div id="c-ucapan" class="hidden op0">
-<h2>Ucapan<div>dan Doa</div></h2>
-  <img src="/images/devider-h2.png" alt="">
-  <Comments server:defer/>
-  <img src="/images/devider-h2.png" alt="">
+<img src="/images/devider-h2.png" alt="">
+
+<div id="c-hadiah" class="hidden op0">
+  <div id="" class="c-title">
+    <img src="/images/decoration/hadiah-left.png" alt="">
+    <h2>Tanda<div>Kasih</div></h2>
+  </div>
+  <p>Doa, restu, serta ucapan selamat Bapak/Ibu/Saudara/i merupakan yang terpenting bagi kami. Bagi Bapak/Ibu/Saudara/i yang bermaksud memberi tanda kasih selain itu, dapat kami terima melalui:</p>
+  <div id="c-hadiah-banklist">
+    Alamat:
+    <div class="bank-card alamat">
+      <div class="hadiah-alamat">
+      <h3>Jl. Kebon Sirih Dalam no. 19</h3>
+      Babakan Ciamis, Sumur Bandung, Kota Bandung.
+      </div>
+    </div>
+    Rekening Bank:
+    <div class="bank-card">
+      <div>
+      <h3>Bank Mandiri a.n. Nabila Annisa</h3>
+      1310016137079
+      </div>
+      <img src="/images/copy.svg" alt="">
+    </div>
+    <div class="bank-card">
+      <div>
+      <h3>Bank BCA a.n Fauzi Irfandika</h3>
+      1310016137079
+      </div>
+      <img src="/images/copy.svg" alt="">
+    </div>
+  </div>
+  <p>Semoga informasi di atas dapat mempermudah Bapak/Ibu/Saudara/i dalam menyampaikan kasihnya kepada kami. Mohon dapat menghubungi kami jika bermaksud memberi tanda kasih.</p>
 </div>
 
+<img src="/images/devider-h2.png" alt="">
 
 <div id="c-penutup" class="hidden op0">
-  <h2>Terima <div>Kasih</div></h2>
-  <p>Terima kasih kami ucapkan atas perhatian dan doa Bapak/Ibu/Saudara/i, semoga kita diberikan kesempatan untuk bertemu pada hari bahagia kami.</p>
+  <h2><div>Kalimat</div>Penutup</h2>
+  <p>Terima kasih kami ucapkan atas perhatian, kasih sayang, serta doa dan restu Bapak/Ibu/Saudara/i, suatu kehormatan bagi kami untuk dapat mengundang anda pada hari bahagia kami. Semoga kita selalu diberkahi kesehatan dan kemampuan, agar dapat bertemu dan berkumpul tidak hanya pada hari bahagia kami, namun pada tiap kesempatan yang ada.</p>
   <div class="ttd">
     <p>tertanda,</p>
     <img src="/logo_bold.svg" alt="">

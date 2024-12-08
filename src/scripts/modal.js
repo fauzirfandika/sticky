@@ -15,6 +15,7 @@ mdlopen.onclick = function() {
   document.getElementById("c-waktu").classList.remove("hidden");
   document.getElementById("c-gallery").classList.remove("hidden");
   document.getElementById("c-tempat").classList.remove("hidden");
+  document.getElementById("c-hadiah").classList.remove("hidden");
   document.getElementById("c-penutup").classList.remove("hidden");
   document.getElementById("c-ucapan").classList.remove("hidden");
   document.getElementById("c-rsvp").classList.remove("hidden");

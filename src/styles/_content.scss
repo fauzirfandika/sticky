@@ -1,6 +1,12 @@
 @use 'ref';
 @use 'var';
 
+.top-flower {
+  position: absolute;
+  top: 0;
+  transform: rotate(180deg);
+}
+
 #content-container {
   @include ref.flexcont(column, center, center, 2rem);
   background-image: url(/images/decor-page-bgparalax.png);
@@ -100,28 +106,22 @@
 #hero-ayat {
   text-align: center;
   padding: 0 5%;
-  @include ref.flexcont(column, end, center, 2rem);
+  @include ref.flexcont(column, end, center, .5rem);
   font-size: 0.75rem;
-  margin-bottom: 5rem;
   span {
     font-size: 1rem;
-  }
-  .devider-h:nth-child(1) {
-    transform: rotate(180deg);
-  }
-  .devider-h:nth-child(2) {
-    transform: rotate(180deg);
   }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #c-mempelai {
-  @include ref.flexcont(column, space-between, normal);
+  @include ref.flexcont(column, center, normal);
   padding: 35% 5%;
   overflow: hidden;
   position: relative;
   gap: 5rem;
+  height: 100vh;
   .op0:nth-child(1){
     transform: translate(-75%, 0);
   }
@@ -173,10 +173,10 @@
 
 #c-gallery {
   @include ref.flexcont(column, center, center);
+  @include ref.c-padding();
   margin-top: 0;
   text-align: left;
   #c-gallery-title {
-    padding-left: 5%;
     @include ref.flexcont(row, flex-start, center, 2rem);
     img {
       right: 0;
@@ -188,7 +188,6 @@
     }
   }
   #gallery-wrapper {
-    @include ref.c-padding(0 5% 0 5%);
     overflow-x: hidden;
     width: min(1000px, 100%);
     columns: 2 20vw;
@@ -240,7 +239,7 @@
   text-align: center;
   .c-title {
     @include ref.flexcont(row, flex-start, center, 2rem);
-    text-align: right;
+    text-align: left;
     img {
       width: 70%;
       transform: rotate(-15deg);
@@ -259,6 +258,53 @@
       height: auto;
       box-shadow: 0 3px 7px var.$grey;
       border-radius: 20px;
+    }
+  }
+}
+
+#c-hadiah {
+  @include ref.flexcont(column, space-between, center, 2.5rem);
+  @include ref.c-padding();
+  width: 100%;
+  overflow-x: hidden;
+  text-align: center;
+  .c-title {
+    @include ref.flexcont(row, flex-end, center, 2rem);
+    text-align: right;
+    img {
+      width: 70%;
+      transform: rotate(-15deg);
+    }
+  }
+  h2 {
+    color: var.$yel;
+  }
+  #c-hadiah-banklist {
+    @include ref.flexcont(column, center, center, .5rem);
+    margin-bottom: .5rem;
+    .alamat {
+      margin-bottom: 1rem;
+    }
+    .bank-card {
+      @include ref.flexcont(row, center, center);
+      text-align: left;
+      width: 90%;
+      border: 1px solid var.$black;
+      border-radius: 10px;
+      padding: 8px;
+      background: #ffffff;
+      box-shadow: 0 2px 2px #20202080;
+      h3 {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+      }
+      img {
+        height: 1.5rem;
+        width: auto;
+      }
+      .hadiah-alamat {
+      text-align: center;
+      }
     }
   }
 }
