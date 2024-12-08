@@ -29,5 +29,18 @@ html {
 }
 
 body {
+  @include ref.flexcont();
   overflow-x: hidden;
+  background: var.$grey;
+}
+
+.media {
+  border: 1px solid black;
+}
+
+@media screen and (min-width: 768px) {
+  .media {
+    max-width: 768px;
+    background: var.$grey;
+  }
 }

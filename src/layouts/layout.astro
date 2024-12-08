@@ -12,23 +12,23 @@ import Count from '../scripts/ctds.astro';
   </head>
 
   <body>
-    <button id="audio-stop" type="button"><img src="/images/music.svg" alt=""></button>
 
-    <div id="cover" class="modal wh-100">
-    <Cover>
-      <slot name="slot-undangan"/>
-    </Cover>
+    <div class="media">
+      <div id="cover" class="modal wh-100">
+        <Cover>
+          <slot name="slot-undangan"/>
+        </Cover>
+      </div>
+      <div id="content-container" class="op0">
+        <Content>
+          <slot name="slot-waktu"/>
+        </Content>
+      </div>
+      <audio id="audio" loop>
+        <source src="/brad-mehldau_blackbird.mp3" type="audio/mpeg">
+      </audio>
     </div>
 
-    <div id="content-container" class="op0">
-      <Content>
-        <slot name="slot-waktu"/>
-      </Content>
-    </div>
-
-    <audio id="audio" loop>
-      <source src="/brad-mehldau_blackbird.mp3" type="audio/mpeg">
-    </audio>
   </body>
 </html>
 

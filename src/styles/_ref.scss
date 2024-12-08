@@ -75,22 +75,9 @@ img {
 
 .wh-100 {
   height: 100vh;
-  width: 100vw;
   @supports (height: 100svh) {
     height: 100svh;
   }
-}
-.wh-100l {
-  height: 100vh;
-  width: 100vw;
-  @supports (height: 100lvh) {
-    height: 100lvh;
-  }
-}
-
-.nf-logo {
-  width: 64px;
-  height: 64px;
 }
 
 button, button[type="submit"] {
