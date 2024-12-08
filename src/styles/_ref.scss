@@ -1,3 +1,5 @@
+@use 'var';
+
 @mixin flexcont ($dir:column, $jc:center, $at:center, $gap:1rem) {
   display: flex;
   flex-direction: $dir;
@@ -29,13 +31,14 @@
 :root {
   font-family: Garamond, serif;
   text-transform: none;
+  color: var.$black;
 }
 
 h1 {
-  font-family: "babyGio", Georgia, serif;
+  font-family: "babyGio", serif;
   font-size: 2rem;
-  font-weight: 400;
-  text-transform: capitalize;
+  font-weight: 200;
+  text-transform: none;
 }
 
 h2 {
@@ -95,7 +98,7 @@ button {
   @include flexcont();
   height: 2.5rem;
   width: auto;
-  border: 1px solid black;
+  border: 1px solid var.$black;
   border-radius: 5rem;
   text-transform: uppercase;
   font-size: .75rem;

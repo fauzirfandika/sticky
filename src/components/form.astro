@@ -1,28 +1,40 @@
 ---
 const { undangan } = Astro.params;
 ---
-  <form id="form-body" class="" method="POST">
-    <div class="hidden">
-      <input type="text" name="nama_def" value=`${undangan}`/>
-    </div>
-    <div class="c-rsvp-nama">
-      <label for="form-nama">Nama Undangan</label>
-      <input type="text" name="nama" id="form-nama" class="input input-height" required/>
-    </div>
+<form id="form-body" class="" method="POST">
+  <div class="hidden">
+    <input type="text" name="nama_def" value=`${undangan}`/>
+  </div>
+  <div class="c-rsvp-nama label">
+    <label for="form-nama">Nama</label>
+    <input type="text" name="nama" id="form-nama" class="input input-height" placeholder=`${undangan}` required/>
+  </div>
+  <div class="label">
+    Kehadiran
     <div class="c-rsvp-rsvp">
-      <label for="form-rsvp">Kehadiran</label>
-      <select name="rsvp" id="form-rsvp" class="input input-height" required>
-        <option value="2">Hadir</option>
-        <option value="1">Belum dapat dipastikan</option>
-        <option value="0">Tidak hadir</option>
-      </select>
+      <label class="radio">
+        <input id="rsvp-hadir" type="radio" name="rsvp" value="2" checked="checked" required/>
+        Hadir
+        <span class="radiomark"></span>
+      </label>
+      <label class="radio">
+        <input id="rsvp-belum" type="radio" name="rsvp" value="1" required/>
+        Tidak tentu
+        <span class="radiomark"></span>
+      </label>
+      <label class="radio">
+        <input id="rsvp-tidak" type="radio" name="rsvp" value="0" required/>
+        Tidak hadir
+        <span class="radiomark"></span>
+      </label>
     </div>
-    <div class="c-rsvp-comment">
-      <label for="form-comment">Doa dan Ucapan</label>
-      <textarea name="comment" rows="5" cols="50" id="form-comment" class="input"/>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+  </div>
+  <div class="c-rsvp-comment label">
+    <label for="form-comment">Doa dan Ucapan</label>
+    <textarea name="comment" rows="5" cols="50" id="form-comment" class="input" placeholder="Ketik doa dan ucapan"/>
+  </div>
+  <button type="submit">Submit</button>
+</form>
 
 
 <script>
@@ -30,6 +42,7 @@ const { undangan } = Astro.params;
   newRSVP?.addEventListener("submit", async (e) => {
     e.preventDefault();
     document.getElementById("form-body").classList.add("hidden");
+    document.getElementById("c-rsvp-tq").classList.remove("hidden");
     const formData = new FormData(newRSVP);
     const vals = Object.fromEntries(formData);
     const res = await fetch("/api/noco.json", {

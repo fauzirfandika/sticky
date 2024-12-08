@@ -1,0 +1,11 @@
+@use 'var';
+$size: 10rem;
+
+#nf-logo {
+  width: $size;
+  height: $size;
+}
+#nf-logo-path {
+  fill: var.$black;
+  fill-opacity: 1;
+}
