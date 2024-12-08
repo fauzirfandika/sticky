@@ -93,7 +93,7 @@ img {
   height: 64px;
 }
 
-button {
+button, button[type="submit"] {
   background: rgba(255,255,255,0.6);
   @include flexcont();
   height: 2.5rem;
@@ -102,9 +102,17 @@ button {
   border-radius: 5rem;
   text-transform: uppercase;
   font-size: .75rem;
+  font-style: normal;
+  font-weight: 400;
   padding: 0 1.5rem;
 }
 
 .hidden {
   display: none!important;
+}
+
+.devider {
+  background-color: var.$grey;
+  height: 50vh;
+  width: 1px;
 }

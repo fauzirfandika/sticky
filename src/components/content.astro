@@ -3,7 +3,13 @@ import Petals from './petalsFront.astro'
 import Form from './form.astro'
 import Comments from './comments.astro'
 ---
+
+<div id="petals-container" class="hidden op0">
+  <Petals/>
+</div>
+
   <div id="hero" class="hidden op0">
+
     <div id="hero-title" class="">
       <h2>
         Undangan<div>Pernikahan</div>
@@ -11,7 +17,8 @@ import Comments from './comments.astro'
       <p>Nabila <span>&</span> Fauzi</p>
     </div>
     <div id="hero-img">
-      <img src="/images/hero.png" alt="hero">
+      <img class="hero-img" src="/images/hero.png" alt="hero">
+      <img class="decor-hero op0" src="/images/decor-hero.png" alt="">
     </div>
     <div id="hero-ayat">
       "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepad-hanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
@@ -20,9 +27,7 @@ import Comments from './comments.astro'
     </div>
   </div>
 
-  <div id="petals-container" class="hidden op0">
-    <Petals/>
-  </div>
+
 
   <div id="c-mempelai" class="hidden op0">
     <img class="cm-decor op0" id="cm-decor1" src="/images/flowers/stalk-yel.png" alt="">
@@ -59,18 +64,22 @@ import Comments from './comments.astro'
 
 
   <div id="c-waktu" class="hidden op0">
-    <h2>Rangkaian<div>Acara</div></h2>
+    <div id="c-waktu-title" class="c-title">
+      <h2>Rangkaian<div>Acara</div></h2>
+      <p>Rangkaian acara meliputi prosesi akad nikah dan resepsi pernikahan yang akan dilaksanakan di hari yang sama.</p>
+    </div>
     <div class="det-info">
-      <img id="wedring" src="/images/wedding-rings.svg" alt="">
+      <img id="wedring" src="/images/wedding-rings-01.svg" alt="">
       <h3>Akad Nikah</h3>
       <p>(Hanya dihadiri keluarga)</p>
     </div>
     <div class="det-info">
-      <img id="wedbouq" src="/images/wedding-bouquet.svg" alt="">
+      <img id="wedbouq" src="/images/wedding-bouquet-01.svg" alt="">
       <h3>Resepsi Pernikahan</h3>
       <p class=""><slot/></p>
     </div>
     <div id="ctd" class="det-info">
+      <img id="hglass" src="/images/hourglass-01.svg" alt="">
       <h3>Menuju Pernikahan</h3>
       <div id="cds"></div>
     </div>
@@ -98,12 +107,17 @@ import Comments from './comments.astro'
     <Comments server:defer/>
   </div>
 
+  <div class="devider"></div>
+
   <div id="c-penutup" class="hidden op0">
     <h2>Terima <div>Kasih</div></h2>
     <p>Terima kasih kami ucapkan atas perhatian dan doa Bapak/Ibu/Saudara/i, semoga kita diberikan kesempatan untuk bertemu pada hari bahagia kami.</p>
-    <div>
+    <div class="ttd">
       <p>tertanda,</p>
       <img src="/logo_bold.svg" alt="">
       <p class="p2">Keluarga<br>Nabila dan Fauzi</p>
+    </div>
+    <div class="decor-page-bottom">
+      <img src="/images/decor-page-bottom.png" alt="">
     </div>
   </div>

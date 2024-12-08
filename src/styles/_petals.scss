@@ -16,10 +16,11 @@
 #petals-container {
   @include ref.flexcont(column, space-between, normal);
   @include ref.c-padding;
-  height: 150vh;
+  height: 200vh;
   overflow: hidden;
   position: absolute;
   gap: 5rem;
+  z-index: 2;
 }
 
 .petals {
@@ -33,15 +34,15 @@
   div {
     position: absolute;
     display: block;
-    &:nth-child(1){@include  petals1 ( -20vh, 10vw, 37.5s, 0s)}
-    &:nth-child(2){@include  petals2 ( -20vh, 20vw, 30s, 7.5s)}
-    &:nth-child(3){@include  petals1 ( -20vh, 30vw, 30s, 15s)}
-    &:nth-child(4){@include  petals2 ( -20vh, 40vw, 22.5s, -7.5s)}
-    &:nth-child(5){@include  petals1 ( -20vh, 50vw, 30s, 0s)}
-    &:nth-child(6){@include  petals2 ( -20vh, 60vw, 30s, 7.5s)}
-    &:nth-child(7){@include  petals1 ( -20vh, 70vw, 30s, 15s)}
-    &:nth-child(8){@include  petals2 ( -20vh, 80vw, 37.5s, -7.5s)}
-    &:nth-child(9){@include  petals1 ( -20vh, 90vw, 30s, 0s)}
+    &:nth-child(1){@include  petals1 ( -20vh, 10vw, 42.5s, 0s)}
+    &:nth-child(2){@include  petals2 ( -20vh, 20vw, 35s, 7.5s)}
+    &:nth-child(3){@include  petals1 ( -20vh, 30vw, 35s, 15s)}
+    &:nth-child(4){@include  petals2 ( -20vh, 40vw, 27.5s, -7.5s)}
+    &:nth-child(5){@include  petals1 ( -20vh, 50vw, 35s, 0s)}
+    &:nth-child(6){@include  petals2 ( -20vh, 60vw, 35s, 7.5s)}
+    &:nth-child(7){@include  petals1 ( -20vh, 70vw, 35s, 15s)}
+    &:nth-child(8){@include  petals2 ( -20vh, 80vw, 42.5s, -7.5s)}
+    &:nth-child(9){@include  petals1 ( -20vh, 90vw, 35s, 0s)}
   }
 }
 
@@ -68,7 +69,7 @@
   }
   100% {
     opacity: 0%;
-    top: 140vh;
+    top: 190vh;
     transform: translateX(0px) rotate(360deg);
   }
 }
@@ -95,7 +96,7 @@
   }
   100% {
     opacity: 0%;
-    top: 140vh;
+    top: 190vh;
     transform: translateX(0px) rotate(-360deg);
   }
 }

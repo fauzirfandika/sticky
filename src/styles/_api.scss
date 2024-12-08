@@ -4,8 +4,14 @@
 #c-rsvp {
   @include ref.flexcont(column, center, center, 1rem);
   @include ref.c-padding();
+  width: 90%;
   overflow: hidden;
   text-align: center;
+  padding: 10% 5%;
+  border: 1px solid var.$black;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 10px var.$grey;
   form {
     @include ref.flexcont(column, center, center, 2rem);
     .input-height {
@@ -29,7 +35,7 @@
     }
     .c-rsvp-rsvp {
       @include ref.flexcont(row, center, flex-start);
-      background: #f2f2f2;
+      background: #ffffff80;
       border-radius: 10rem;
       padding: 8px;
       font-family: sans-serif;
@@ -39,6 +45,8 @@
         border: 1px solid var.$grey;
         color: var.$grey;
         border-radius: 10rem;
+        font-size: .75rem;
+        transition: all .5s;
         input {
           display: hidden;
           opacity: 0;
@@ -76,6 +84,7 @@
     border-bottom: 2px solid #e0e0e0;
     padding:5% 2.5%;
     li {
+      background-color: #ffffff;
       scroll-snap-align: center;
       display: grid;
       grid-template-columns: 15% 80%;
