@@ -7,25 +7,27 @@ import Comments from './comments.astro'
   <Petals/>
 </div>
 
-<div id="hero" class="hidden op0">
+<div id="hero" class="hidden op0 wh-100">
 
   <div id="hero-title" class="">
     <h2>
       Undangan<div>Pernikahan</div>
     </h2>
-    <p>Nabila <span>&</span> Fauzi</p>
   </div>
   <div id="hero-img">
     <img class="hero-img" src="/images/hero.png" alt="hero">
     <img class="decor-hero op0" src="/images/decor-hero.png" alt="">
   </div>
-  <div id="hero-ayat">
-    "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepad-hanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
-    <br>
-    <span class="txt-b">Qs. Ar-Rum 21</span>
-  </div>
+    <p>Nabila <span>&</span> Fauzi</p>
 </div>
 
+  <div id="hero-ayat">
+    <img class="devider-h" src="/images/devider-h.png" alt="devider">
+    <span class="txt-b">Qs. Ar-Rum 21</span>
+    <br>
+    "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepad-hanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+    <img class="devider-h" src="/images/devider-h.png" alt="devider">
+  </div>
 
 
 <div id="c-mempelai" class="hidden op0">
@@ -48,7 +50,10 @@ import Comments from './comments.astro'
 </div>
 
 <div id="c-gallery" class="hidden op0">
-  <h2><div>Pra</div> Nikah</h2>
+  <div id="c-gallery-title" class="c-title">
+    <h2><div>Pra</div> Pernikahan</h2>
+    <img src="/images/decoration/praper-left.png" alt="">
+  </div>
   <div id="gallery-wrapper">
     <img class="op0" width="10vw" src="/gallery/02.jpg" alt="">
     <img class="op0" width="10vw" src="/gallery/07.jpg" alt="">
@@ -63,9 +68,10 @@ import Comments from './comments.astro'
 
 <div id="c-waktu" class="hidden op0">
   <div id="c-waktu-title" class="c-title">
+    <img src="/images/decoration/rangkaian-left.png" alt="">
     <h2>Rangkaian<div>Acara</div></h2>
-    <p>Rangkaian acara meliputi prosesi akad nikah dan resepsi pernikahan yang akan dilaksanakan di hari yang sama.</p>
   </div>
+  <p class="description">Rangkaian acara meliputi prosesi akad nikah dan resepsi pernikahan yang akan dilaksanakan di hari yang sama.</p>
   <div class="det-info">
     <img id="wedring" src="/images/wedding-rings-01.svg" alt="">
     <h3>Akad Nikah</h3>
@@ -84,8 +90,12 @@ import Comments from './comments.astro'
   <button class="button" type="button"><a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan%20Nabila%20dan%20Fauzi&details&dates=20241221/20241221" target="_blank">Simpan Tanggal</a></button>
 </div>
 
+
 <div id="c-tempat" class="hidden op0">
-  <h2>Lokasi<div>Kegiatan</div></h2>
+  <div id="c-tempat-title" class="c-title">
+    <h2>Lokasi<div>Kegiatan</div></h2>
+    <img src="/images/decoration/tempat-right.png" alt="">
+  </div>
   <div class="det-info">
     <h3>Uncle D Space</h3>
     <p>Jl. Cigadung Raya Barat no. 28A<br>Cibeunying Kaler, Bandung</p>
@@ -96,8 +106,10 @@ import Comments from './comments.astro'
 </div>
 
 <div id="c-rsvp" class="hidden op0">
+  <img src="/images/devider-h.png" alt="">
   <h2>Reservasi<div>Kehadiran</div></h2>
   <Form/>
+  <img src="/images/devider-h-rt.png" alt="">
   <p id="c-rsvp-tq" class="hidden">Terima atas ucapan, doa, serta konfirmasi kehadirannya.</p>
 </div>
 
