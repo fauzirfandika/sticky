@@ -19,10 +19,10 @@ mdlopen.onclick = function() {
   document.getElementById("c-ucapan").classList.remove("hidden");
   document.getElementById("c-rsvp").classList.remove("hidden");
   modal.style.top = "-110lvh";
+  bgaud.play();
 }
 
 btnstop.onclick = function () {
   togglePlay()
 }
-
 
