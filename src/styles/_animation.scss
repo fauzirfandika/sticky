@@ -2,6 +2,7 @@
   opacity: 0;
   filter: blur(1px);
   transition: all 1s;
+  transition-delay: 0.3s;
 }
 
 .show {
@@ -11,4 +12,49 @@
 }
 .op0#c-rsvp {
   filter: blur(0px)!important;
+}
+
+#gallery-wrapper .op0 {
+  transform: translate(10px,0)!important;
+}
+
+.op0#c-waktu-title {
+  transform: translateX(-10vw);
+}
+.op0#c-tempat-title {
+  transform: translateX(10vw);
+}
+.op0#detil-tempat {
+  transform: translateY(5vh);
+}
+.op0#peta {
+  transform: scale(0.7);
+}
+
+.op0#wedring {
+  transform: translateY(-5vh);
+  transition-delay: 0.4s;
+}
+
+.op0#wedbouq {
+  transform: translateY(-5vh);
+  transition-delay: 0.5s;
+}
+.op0#hglass {
+  transform: translateY(-5vh);
+  transition-delay: 0.6s;
+}
+
+.op0#c-ucapan {
+  transform: translateY(10vh);
+}
+.op0#c-rsvp {
+  transform: scale(0.7);
+}
+
+.op0#c-hadiah-title {
+  transform: translateX(-10vw);
+}
+.op0#c-hadiah-banklist {
+  transform: translateX(-10vw);
 }
