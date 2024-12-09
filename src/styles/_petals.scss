@@ -16,12 +16,12 @@
 #petals-container {
   @include ref.flexcont(column, space-between, normal);
   @include ref.c-padding;
-  height: 200vh;
+  height: 110vh;
   overflow: hidden;
   position: absolute;
   top:0;
   gap: 5rem;
-  z-index: 2;
+  z-index: 0;
 }
 
 .petals {
@@ -31,7 +31,7 @@
   width: 25px;
   height: 25px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
   div {
     position: absolute;
     display: block;
@@ -70,7 +70,7 @@
   }
   100% {
     opacity: 0%;
-    top: 190vh;
+    top: 100vh;
     transform: translateX(0px) rotate(360deg);
   }
 }
@@ -97,7 +97,7 @@
   }
   100% {
     opacity: 0%;
-    top: 190vh;
+    top: 100vh;
     transform: translateX(0px) rotate(-360deg);
   }
 }
