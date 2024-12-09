@@ -31,8 +31,11 @@
     background: #ffffff;
     gap: 0.5rem;
   }
+  #cover-undangan {
+    padding: .5rem 0;
+  }
   #cover-title {
-    @include ref.flexcont(column, center, center);
+    @include ref.flexcont(column, center, center,);
     //border: 1px solid black;
     #title-dan {
       line-height: 0;

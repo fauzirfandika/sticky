@@ -86,10 +86,10 @@
   @include ref.flexcont(column, center, center, 1rem);
   @include ref.c-padding();
   h2 {
-    color: var.$gre;
+    color: var.$yel;
     text-align: center;
     div {
-    color: var.$l-gre;
+    color: var.$l-yel;
     }
   }
   ul {

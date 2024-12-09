@@ -231,9 +231,9 @@
       width: 60%;
     }
     h2 {
-      color: var.$yel;
+      color: var.$gre;
       div {
-        color: var.$l-yel;
+        color: var.$l-gre;
       }
     }
   }
@@ -301,14 +301,14 @@
     }
   }
   h2 {
-    color: var.$yel;
+    color: var.$gre;
     div {
-      color: var.$l-yel;
+      color: var.$l-gre;
     }
   }
   #c-hadiah-banklist {
     @include ref.flexcont(column, center, center, .5rem);
-    margin-bottom: .5rem;
+    margin-bottom: .5rgre;
       .alamat {
         background-color: #f8d3d8;
       }
