@@ -29,7 +29,8 @@
 }
 
 :root {
-  font-family: Garamond, serif;
+  font-family: "Poppins", serif;
+  font-weight: 300;
   text-transform: none;
   color: var.$black;
 }
@@ -49,6 +50,7 @@ h2 {
     font-family: "Vidaloka", serif;
     font-size: 2rem;
     font-weight: 100;
+    font-style: italic;
   }
 }
 
