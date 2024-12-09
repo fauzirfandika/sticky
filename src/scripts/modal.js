@@ -9,16 +9,7 @@ function togglePlay() {
 
 mdlopen.onclick = function() {
   window.scrollTo(0,0);
-  document.getElementById("hero").classList.remove("hidden");
-  document.getElementById("petals-container").classList.remove("hidden");
-  document.getElementById("c-mempelai").classList.remove("hidden");
-  document.getElementById("c-waktu").classList.remove("hidden");
-  document.getElementById("c-gallery").classList.remove("hidden");
-  document.getElementById("c-tempat").classList.remove("hidden");
-  document.getElementById("c-hadiah").classList.remove("hidden");
-  document.getElementById("c-penutup").classList.remove("hidden");
-  document.getElementById("c-ucapan").classList.remove("hidden");
-  document.getElementById("c-rsvp").classList.remove("hidden");
+  document.getElementById("content-container").classList.remove("hidden");
   modal.style.top = "-110lvh";
   bgaud.play();
 }

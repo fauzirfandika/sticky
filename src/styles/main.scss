@@ -30,17 +30,20 @@ html {
 
 body {
   @include ref.flexcont();
-  overflow-x: hidden;
   background: var.$grey;
 }
 
-.media {
-  border: 1px solid black;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .media {
-    max-width: 768px;
-    background: var.$grey;
+    position: relative;
+    max-width: 480px;
+  }
+  .modal {
+    position: absolute;
+  }
+  #c-gallery {
+    #gallery-wrapper {
+      columns: 2 5vw;
+    }
   }
 }

@@ -3,12 +3,12 @@ import Petals from './petalsFront.astro'
 import Form from './form.astro'
 import Comments from './comments.astro'
 ---
-<div id="petals-container" class="hidden op0">
+<div id="petals-container" class="op0">
   <Petals/>
 </div>
 
 <img class="top-flower" src="/images/decor-page-bottom.png" alt="">
-<div id="hero" class="hidden op0 wh-100">
+<div id="hero" class="op0 wh-100">
 
   <div id="hero-title" class="">
     <h2>
@@ -22,15 +22,15 @@ import Comments from './comments.astro'
     <p>Nabila <span>&</span> Fauzi</p>
 </div>
 
-<img src="/images/devider-h2.png" alt="">
+<img class="" src="/images/devider-h2.png" alt="">
 
-<div id="hero-ayat">
+<div id="hero-ayat" class="">
   <span class="txt-b">Qs. Ar-Rum 21</span>
   <br>
   "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepad-hanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
 </div>
 
-<div id="c-mempelai" class="hidden op0">
+<div id="c-mempelai" class="op0">
   <img class="cm-decor op0" id="cm-decor1" src="/images/flowers/stalk-yel.png" alt="">
   <img class="cm-decor op0" id="cm-decor2" src="/images/flowers/stalk-red.png" alt="">
   <div id="cm-nabila">
@@ -49,7 +49,7 @@ import Comments from './comments.astro'
   </div>
 </div>
 
-<div id="c-gallery" class="hidden op0">
+<div id="c-gallery" class="op0">
   <div id="c-gallery-title" class="c-title">
     <h2><div>Pra</div> Pernikahan</h2>
     <img src="/images/decoration/praper-left.png" alt="">
@@ -66,9 +66,9 @@ import Comments from './comments.astro'
   </div>
 </div>
 
-<img src="/images/devider-h2.png" alt="">
+<img class="" src="/images/devider-h2.png" alt="">
 
-<div id="c-waktu" class="hidden op0">
+<div id="c-waktu" class="op0">
   <div id="c-waktu-title" class="c-title">
     <img src="/images/decoration/rangkaian-left.png" alt="">
     <h2>Rangkaian<div>Acara</div></h2>
@@ -92,9 +92,9 @@ import Comments from './comments.astro'
   <button class="button" type="button"><a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan%20Nabila%20dan%20Fauzi&details&dates=20241221/20241221" target="_blank">Simpan Tanggal</a></button>
 </div>
 
-<img src="/images/devider-h2.png" alt="">
+<img class="" src="/images/devider-h2.png" alt="">
 
-<div id="c-tempat" class="hidden op0">
+<div id="c-tempat" class="op0">
   <div id="c-tempat-title" class="c-title">
     <h2>Lokasi<div>Kegiatan</div></h2>
     <img src="/images/decoration/tempat-right.png" alt="">
@@ -108,23 +108,23 @@ import Comments from './comments.astro'
   <div></div>
 </div>
 
-<img src="/images/devider-h2.png" alt="">
+<img class="" src="/images/devider-h2.png" alt="">
 
-<div id="c-ucapan" class="hidden op0">
+<div id="c-ucapan" class="op0">
   <h2>Ucapan<div>dan Doa</div></h2>
   <Comments server:defer/>
 </div>
 
-<div id="c-rsvp" class="hidden op0">
+<div id="c-rsvp" class="op0">
   <h2>Reservasi<div>Kehadiran</div></h2>
   <Form/>
   <p id="c-rsvp-tq" class="hidden">Terima atas ucapan, doa, serta konfirmasi kehadirannya.</p>
   <img src="/images/decoration/res.png" alt="">
 </div>
 
-<img src="/images/devider-h2.png" alt="">
+<img class="" src="/images/devider-h2.png" alt="">
 
-<div id="c-hadiah" class="hidden op0">
+<div id="c-hadiah" class="op0">
   <div id="" class="c-title">
     <img src="/images/decoration/hadiah-left.png" alt="">
     <h2>Tanda<div>Kasih</div></h2>
@@ -141,25 +141,25 @@ import Comments from './comments.astro'
     Rekening Bank:
     <div class="bank-card">
       <div>
-      <h3>Bank Mandiri a.n. Nabila Annisa</h3>
-      1310016137079
+        <h3>Mandiri a.n. Nabila Annisa</h3>
+      <span id="bank-nabila">1310016137079</span>
       </div>
-      <img src="/images/copy.svg" alt="">
+      <button class="copy" onclick="copyTextNabila()" data-copy=".bank-nabila" type="button"><img src="/images/copy.svg" alt=""></button>
     </div>
     <div class="bank-card">
       <div>
-      <h3>Bank BCA a.n Fauzi Irfandika</h3>
-      1310016137079
+      <h3>BCA a.n Fauzi Irfandika</h3>
+      <span id="bank-fauzi">4970646847</span>
       </div>
-      <img src="/images/copy.svg" alt="">
+      <button class="copy" onclick="copyTextFauzi()" data-copy=".bank-fauzi" type="button"><img src="/images/copy.svg" alt=""></button>
     </div>
   </div>
   <p>Semoga informasi di atas dapat mempermudah Bapak/Ibu/Saudara/i dalam menyampaikan kasihnya kepada kami. Mohon dapat menghubungi kami jika bermaksud memberi tanda kasih.</p>
 </div>
 
-<img src="/images/devider-h2.png" alt="">
+<img class="" src="/images/devider-h2.png" alt="">
 
-<div id="c-penutup" class="hidden op0">
+<div id="c-penutup" class="op0">
   <h2><div>Kalimat</div>Penutup</h2>
   <p>Terima kasih kami ucapkan atas perhatian, kasih sayang, serta doa dan restu Bapak/Ibu/Saudara/i, suatu kehormatan bagi kami untuk dapat mengundang anda pada hari bahagia kami. Semoga kita selalu diberkahi kesehatan dan kemampuan, agar dapat bertemu dan berkumpul tidak hanya pada hari bahagia kami, namun pada tiap kesempatan yang ada.</p>
   <div class="ttd">
@@ -171,3 +171,36 @@ import Comments from './comments.astro'
     <img src="/images/decor-page-bottom.png" alt="">
   </div>
 </div>
+
+<!--<script>-->
+<!--  document.querySelectorAll(".copy").forEach(copyButton => {-->
+<!--    copyButton.addEventListener("click", () => {-->
+<!--      const targetElement = document.querySelector(copyButton.dataset.copy);-->
+<!--      const textToCopy = targetElement.textContent-->
+<!--        .replace(/\s+/g, " ")-->
+<!--        .trim();-->
+<!--      navigator.clipboard.writeText(textToCopy).then(() => {-->
+<!--        alert("Copied!");-->
+<!--      })-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->
+
+<script is:inline>
+  function copyTextFauzi() {
+    const targetElement = document.getElementById("bank-fauzi");
+    const textToCopy = targetElement.textContent
+      .replace(/\s+/g, " ")
+      .trim();
+    navigator.clipboard.writeText(textToCopy);
+  };
+</script>
+<script is:inline>
+  function copyTextNabila() {
+    const targetElement = document.getElementById("bank-nabila");
+    const textToCopy = targetElement.textContent
+      .replace(/\s+/g, " ")
+      .trim();
+    navigator.clipboard.writeText(textToCopy);
+  };
+</script>
