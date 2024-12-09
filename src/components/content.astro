@@ -144,14 +144,14 @@ import Comments from './comments.astro'
         <h3>Mandiri a.n. Nabila Annisa</h3>
       <span id="bank-nabila">1310016137079</span>
       </div>
-      <button class="copy" onclick="copyTextNabila()" data-copy=".bank-nabila" type="button"><img src="/images/copy.svg" alt=""></button>
+      <button id="copy-nabila" onclick="copyTextNabila()" data-copy=".bank-nabila" type="button"><img src="/images/copy.svg" alt=""></button>
     </div>
     <div class="bank-card">
       <div>
       <h3>BCA a.n Fauzi Irfandika</h3>
       <span id="bank-fauzi">4970646847</span>
       </div>
-      <button class="copy" onclick="copyTextFauzi()" data-copy=".bank-fauzi" type="button"><img src="/images/copy.svg" alt=""></button>
+      <button id="copy-fauzi" onclick="copyTextFauzi()" data-copy=".bank-fauzi" type="button"><img src="/images/copy.svg" alt=""></button>
     </div>
   </div>
   <p>Semoga informasi di atas dapat mempermudah Bapak/Ibu/Saudara/i dalam menyampaikan kasihnya kepada kami. Mohon dapat menghubungi kami jika bermaksud memberi tanda kasih.</p>
@@ -193,6 +193,15 @@ import Comments from './comments.astro'
       .replace(/\s+/g, " ")
       .trim();
     navigator.clipboard.writeText(textToCopy);
+
+    const myButton = document.getElementById("copy-fauzi")
+    myButton.disabled = true;
+    targetElement.textContent = "Tersalin!";
+
+    setTimeout(() => {
+    myButton.disabled = false;
+    targetElement.textContent = "4970646847";
+    }, 1000);
   };
 </script>
 <script is:inline>
@@ -202,5 +211,13 @@ import Comments from './comments.astro'
       .replace(/\s+/g, " ")
       .trim();
     navigator.clipboard.writeText(textToCopy);
+    const myButton = document.getElementById("copy-nabila")
+    myButton.disabled = true;
+    targetElement.textContent = "Tersalin!";
+
+    setTimeout(() => {
+    myButton.disabled = false;
+    targetElement.textContent = "1310016137079";
+    }, 1000);
   };
 </script>

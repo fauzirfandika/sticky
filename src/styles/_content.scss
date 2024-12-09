@@ -87,9 +87,9 @@
     }
     .hero-img {
       z-index: 1;
-      height: 90%;
+      height: 80%;
       width: auto;
-      border-radius: 4rem;
+      border-radius: 3.5rem;
       box-shadow: 0 5px 20px var.$grey;
     }
     .decor-hero {
@@ -123,10 +123,10 @@
   gap: 5rem;
   height: 100vh;
   .op0:nth-child(1){
-    transform: translate(-75%, 0);
+    transform: translate(-30%, 0);
   }
   .op0:nth-child(2){
-    transform: translate(75%, 0);
+    transform: translate(30%, 0);
   }
   .cm-decor {
     width: 60%;
@@ -295,13 +295,21 @@
       padding: 8px;
       background: #ffffff;
       box-shadow: 0 2px 2px #20202080;
+      transition: all 2.5s;
+      transform: scale(1);
       h3 {
+      transition: all .5s;
         font-size: 1rem;
         margin-bottom: .5rem;
       }
+      span {
+      transition: all .5s;
+      }
       button {
+      transition: all .5s;
         width: 8px;
         img {
+      transition: all .5s;
           height: 1.25rem;
           width: auto;
         }
@@ -309,8 +317,18 @@
       .hadiah-alamat {
       text-align: center;
       }
-      &:has(button:active) {
-        background: var.$black;
+      &:has(button:disabled) {
+        border-color: var.$l-gre;
+        h3, span {
+        color: var.$gre;
+        }
+        button {
+          background-color: var.$l-gre;
+          border: var.$l-gre;
+          img {
+            opacity: 0;
+          }
+        }
       }
     }
   }
