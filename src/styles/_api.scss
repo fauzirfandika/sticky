@@ -24,6 +24,9 @@
   }
   h2 {
     color: var.$red;
+    div {
+      color: var.$l-red;
+    }
   }
   form {
     @include ref.flexcont(column, center, center, 2rem);
@@ -83,8 +86,11 @@
   @include ref.flexcont(column, center, center, 1rem);
   @include ref.c-padding();
   h2 {
-    color: var.$l-gre;
+    color: var.$gre;
     text-align: center;
+    div {
+    color: var.$l-gre;
+    }
   }
   ul {
     @include ref.flexcont(column, flex-start, start, .5rem);

@@ -66,12 +66,13 @@
   bottom: 0;
   transition-delay: .3s;
   #hero-title {
-    text-shadow: 0 1px 1px var.$grey;
+    text-shadow: 1px 1px 1px var.$grey;
   }
   p {
     z-index: 2;
     font-size: 2rem;
     text-shadow: 0 1px 1px var.$grey;
+    font-family: "Vidaloka", serif;
     span {
       font-style: italic;
       font-family: "Playfair Display", serif;
@@ -159,14 +160,21 @@
     z-index: 1;
     text-align: right;
     h2 {
-    color: var.$yel;
+      color: var.$yel;
+      div {
+        color: var.$l-yel;
+        font-style: italic;
+      }
     }
   }
   #cm-fauzi-txt {
     @extend #cm-nabila-txt;
     text-align: left;
     h2 {
-    color: var.$gre;
+      color: var.$gre;
+      div {
+        color: var.$l-gre;
+      }
     }
   }
 }
@@ -185,7 +193,10 @@
       height: auto;
     }
     h2 {
-      color: var.$l-blu;
+      color: var.$blu;
+      div {
+        color: var.$l-blu;
+      }
     }
   }
   #gallery-wrapper {
@@ -215,6 +226,9 @@
     }
     h2 {
       color: var.$red;
+      div {
+        color: var.$l-red;
+      }
     }
   }
   #ctd {
@@ -248,6 +262,9 @@
   }
   h2 {
     color: var.$pur;
+    div {
+      color: var.$l-pur;
+    }
   }
   .det-info {
     @include ref.flexcont(column, center, center, .5rem);
@@ -279,6 +296,9 @@
   }
   h2 {
     color: var.$yel;
+    div {
+      color: var.$l-yel;
+    }
   }
   #c-hadiah-banklist {
     @include ref.flexcont(column, center, center, .5rem);
@@ -343,6 +363,9 @@
   overflow-x: hidden;
   h2 {
     color: var.$pur;
+    div {
+      color: var.$l-pur;
+    }
   }
   .ttd-fau {
     color: var.$gre;
