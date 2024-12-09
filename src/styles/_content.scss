@@ -50,9 +50,6 @@
   }
 }
 
-.op0#hero {
-  transform: scale(.9, .9);
-}
 #hero {
   // background: linear-gradient(#00000000 50%,rgba(255, 254, 247, 1)), url(/images/hero-01.jpg) ;
   // @include ref.background-cover;
@@ -208,7 +205,14 @@
     column-gap: .25rem;
     img{
       display: block;
+      cursor: pointer;
       margin-bottom: .25rem;
+      pointer-events: auto;
+    }
+    .gallery-item {
+      &:hover {
+        transform: scale(0.95);
+      }
     }
   }
 }
@@ -305,53 +309,65 @@
   #c-hadiah-banklist {
     @include ref.flexcont(column, center, center, .5rem);
     margin-bottom: .5rem;
-    .alamat {
-      margin-bottom: 1rem;
-    }
+      .alamat {
+        background-color: #f8d3d8;
+      }
+      .card-nabila {
+        background-color: #fceecf;
+      }
+      .card-fauzi {
+        background-color: #dce3ef;
+      }
     .bank-card {
       @include ref.flexcont(row, center, center);
       text-align: left;
-      width: 90%;
       border: 1px solid var.$black;
       border-radius: 10px;
+      width: 90%;
       padding: 8px;
-      background: #ffffff;
       box-shadow: 0 2px 2px #20202080;
-      transition: all 2.5s;
+      transition: all 1s;
       transform: scale(1);
+      font-size: .80rem;
       h3 {
-      transition: all .5s;
-        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        transition: all .1s;
+        font-size: .80rem;
         margin-bottom: .5rem;
       }
       span {
-      transition: all .5s;
+        transition: all 1s;
       }
       button {
-      transition: all .5s;
-        width: 8px;
+        transition: all 1s;
+        width: 30px;
+        height: 30px;
+        padding: 0;
         img {
-      transition: all .5s;
-          height: 1.25rem;
-          width: auto;
+          transition: all 1s;
+          width: 70%;
+          height: auto;
         }
-      }
-      .hadiah-alamat {
-      text-align: center;
       }
       &:has(button:disabled) {
         border-color: var.$l-gre;
+        background-color: #ffffff;
         h3, span {
-        color: var.$gre;
+          color: var.$gre;
         }
         button {
-          background-color: var.$l-gre;
-          border: var.$l-gre;
+          background-color: #ffffff;
+          border: #ffffff;
           img {
             opacity: 0;
           }
         }
       }
+    }
+    .alamat {
+      margin-bottom: 1rem;
+      text-align: center;
     }
   }
 }
