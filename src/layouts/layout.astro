@@ -16,7 +16,15 @@ import Count from '../scripts/ctds.astro';
       <button id="audio-stop" type="button"><img src="/images/music.svg" alt=""></button>
       <div id="cover" class="modal wh-100">
         <Cover>
-          <slot name="slot-undangan"/>
+          <Fragment slot="nama-tamu">
+            <slot name="slot-undangan"/>
+          </Fragment>
+          <Fragment slot="alamat-tamu">
+            <slot name="slot-alamat"/>
+          </Fragment>
+          <Fragment slot="daerah-tamu">
+            <slot name="slot-daerah"/>
+          </Fragment>
         </Cover>
       </div>
       <div id="content-container" class="hidden op0">

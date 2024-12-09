@@ -4,34 +4,20 @@ import Form from '../../components/form.astro';
 //const res = await fetch (`${Astro.url}api/noco.json`);
 //const data = await res.json();
 
-const pages = [
-  {
-    sesi: 'sm',
-    waktu: '18.30 - 21.00',
-  },
-  {
-    sesi: 'ss',
-    waktu: '15.00 - 17.30',
-  },
-  {
-    sesi: 'ff',
-    waktu: '15.00 - 21.00',
-  }
-];
-
-const { sesi } = Astro.params;
 const { undangan } = Astro.params;
-const page = pages.find((page) => page.sesi === sesi);
-if (!page) return Astro.redirect("/404");
-const { waktu } = page;
 
 ---
 <Layout>
   <Fragment slot="slot-undangan">
     {undangan}
   </Fragment>
+  <Fragment slot="slot-alamat">
+    Tempat
+  </Fragment>
+  <Fragment slot="slot-daerah">
+  </Fragment>
   <Fragment slot="slot-waktu">
-    {waktu}
+    15.00 - 21.00
   </Fragment>
 </Layout>
 

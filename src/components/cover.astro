@@ -2,8 +2,8 @@
 ---
 <div id="cover-undangan" class="cover-item">
   <p class="">Kepada Yth.</p>
-  <div id="nama-undangan" class=""><slot/></div>
-  <p class="alamat-tamu">di<br>Tempat</p>
+  <div id="nama-undangan" class=""><slot name="nama-tamu"/></div>
+  <p class="alamat-tamu">di<br><slot name="alamat-tamu"/><br><slot name="daerah-tamu"/></p>
 </div>
 
 <div id="cover-title" class="cover-item">

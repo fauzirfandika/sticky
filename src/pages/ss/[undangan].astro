@@ -1,13 +1,16 @@
 ---
-import Layout from '../layouts/layout.astro';
-import Form from '../components/form.astro';
+import Layout from '../../layouts/layout.astro';
+import Form from '../../components/form.astro';
+const { undangan } = Astro.params;
 ---
 <Layout>
   <Fragment slot="slot-undangan">
-    Tamu Undangan
+    {undangan}
   </Fragment>
   <Fragment slot="slot-alamat">
     Tempat
+  </Fragment>
+  <Fragment slot="slot-daerah">
   </Fragment>
   <Fragment slot="slot-waktu">
     15.00 - 17.30
