@@ -110,7 +110,7 @@
   text-align: center;
   padding: 0 5%;
   @include ref.flexcont(column, end, center, .5rem);
-  font-size: 0.75rem;
+  font-size: 1rem;
   span {
     font-family: "Vidaloka", serif;
     font-size: 1rem;
@@ -370,7 +370,7 @@
     }
   }
   p {
-    font-size: .80rem;
+    font-size: 1rem;
   }
   .ttd {
     @include ref.flexcont(column, center, center, 1rem);
@@ -382,13 +382,51 @@
     p {
       font-family: "Poppins", sans-serif;
       letter-spacing: .125rem;
-      font-size: .80rem;
+      font-size: 1rem;
       font-weight: 300;
+    }
+    .ttd-kel {
+      color: var.$red;
+      font-weight: 600;
+    }
+    .ttd-nab {
+      color: var.$yel;
+      font-weight: 600;
+    }
+    .ttd-fau {
+      color: var.$gre;
+      font-weight: 600;
     }
   }
   .decor-page-bottom {
     display: flex;
     position: absolute;
     bottom: 0;
+  }
+}
+
+#c-credits {
+  @include ref.flexcont(row, center, center, 2rem);
+  padding: 3%;
+  div {
+    @include ref.flexcont(column, center, center, .5rem);
+    width: 20%;
+  }
+  #creds-right {
+    text-align: left;
+  }
+  #creds-left {
+    text-align: right;
+  }
+  p {
+    font-size: .5rem;
+    span {
+      font-weight: 600;
+    }
+  }
+  img {
+    height: 30px;
+    width: auto;
+    margin-bottom: .5rem;
   }
 }
