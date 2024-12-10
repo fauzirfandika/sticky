@@ -6,7 +6,10 @@ const data = await res.json();
   {data.list.map((post) => (
   <li>
     <div class="noco-namainit">
-      {post.nama_init}
+      <div>
+        {post.nama_init}
+      </div>
+      {post.rsvp}
     </div>
     <div class="noco-ucapan">
       <div class="txt-b">{post.nama}</div>
@@ -15,3 +18,4 @@ const data = await res.json();
   </li>
   ))}
 </ul>
+<a href=`${Astro.url.origin}/ucapan` target=_ >Lihat lebih banyak <img src="/images/new-tab.svg" alt=""></a>

@@ -1,6 +1,6 @@
 ---
-import '../../styles/privateList.scss'
-const res = await fetch (`${Astro.url.origin}/api/nocoPrivate.json`);
+import '../styles/privateList.scss'
+const res = await fetch (`${Astro.url.origin}/api/nocoFull.json`);
 const data = await res.json();
 ---
 <html lang="en">
@@ -15,15 +15,12 @@ const data = await res.json();
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width initial-scale=1, maximum-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <title>Nabila dan Fauzi</title>
+    <title>Ucapan dan Doa | Nabila dan Fauzi</title>
   </head>
 
   <body>
     <div id="c-ucapan">
-      <div>
-        <h2>Ucapan <div>dan Kehadiran</div></h2>
-        <p>Tanpa filter</p>
-      </div>
+      <h2>Ucapan <div>dan Doa</div></h2>
       <ul>
         {data.list.map((post) => (
         <li>

@@ -12,36 +12,41 @@
 
 #c-ucapan {
   @include ref.flexcont(column, flex-start, center, 1rem);
-  @include ref.c-padding();
-  height: 90vh;
+  @include ref.c-padding(15% 5%);
+  height: 100vh;
+  @supports (height: 100svh) {
+    height: 100svh;
+  }
   ul {
     @include ref.flexcont(column, flex-start, start, .5rem);
     text-align: left;
     list-style-type: none;
     min-height: 10vh;
-    max-height: 50vh;
     overflow-x: hidden;
     scroll-snap-type: both mandatory;
     border-top: 2px solid #e0e0e0;
     border-bottom: 2px solid #e0e0e0;
-    padding: 5% 1%;
+    padding: 3% 3%;
     li {
-      background-color: #ffffff;
-      scroll-snap-align: center;
       display: grid;
       grid-template-columns: 75% 20%;
       align-items: center;
       justify-content: space-between;
-      padding: 2.5% 5%;
+
+      padding: 3% 5%;
+
+      background-color: #ffffff;
       border: 1px solid #e0e0e0;
       border-radius: 10px;
+      font-size: .80rem;
+
       .noco-kehadiran {
         text-align: center;
-        font-size: 1rem;
         font-weight: 600;
       }
       .noco-ucapan {
         word-wrap: break-word;
+        max-width: 100%;
       }
     }
   }
