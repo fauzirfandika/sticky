@@ -2,6 +2,7 @@
 import '../../styles/privateList.scss'
 const res = await fetch (`${Astro.url.origin}/api/nocoPrivate.json`);
 const data = await res.json();
+console.log(Astro.url);
 ---
 <html lang="en">
   <head>

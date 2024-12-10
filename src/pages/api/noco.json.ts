@@ -26,11 +26,3 @@ export const POST: APIRoute = async ({ request }) => {
     })
   );
 }
-
-export const DELETE: APIRoute = ({ request }) => {
-  return new Response(JSON.stringify({
-      message: "This was a DELETE!"
-    })
-  )
-}
-
