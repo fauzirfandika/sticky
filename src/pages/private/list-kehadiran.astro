@@ -2,7 +2,6 @@
 import '../../styles/privateList.scss'
 const res = await fetch (`${Astro.url.origin}/api/nocoPrivate.json`);
 const data = await res.json();
-console.log(Astro.url);
 ---
 <html lang="en">
   <head>
@@ -26,14 +25,14 @@ console.log(Astro.url);
         <p>Tanpa filter</p>
       </div>
       <ul>
-        {data.list.map((post) => (
+        {data.list.map((formData) => (
         <li>
           <div class="noco-ucapan">
-            <div class="txt-b">{post.nama}</div>
-            {post.comment}
+            <div class="txt-b">{formData.nama}</div>
+            {formData.comment}
           </div>
           <div class="noco-kehadiran">
-            {post.rsvp}
+            {formData.rsvp}
           </div>
         </li>
         ))}

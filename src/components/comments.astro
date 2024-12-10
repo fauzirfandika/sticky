@@ -3,17 +3,17 @@ const res = await fetch (`${Astro.url.origin}/api/noco.json`);
 const data = await res.json();
 ---
 <ul>
-  {data.list.map((post) => (
+  {data.list.map((formData) => (
   <li>
     <div class="noco-namainit">
       <div>
-        {post.nama_init}
+        {formData.nama_init}
       </div>
-      {post.rsvp}
+      {formData.rsvp}
     </div>
     <div class="noco-ucapan">
-      <div class="txt-b">{post.nama}</div>
-      {post.comment}
+      <div class="txt-b">{formData.nama}</div>
+      {formData.comment}
     </div>
   </li>
   ))}

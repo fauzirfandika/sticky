@@ -22,14 +22,14 @@ const data = await res.json();
     <div id="c-ucapan">
       <h2>Ucapan <div>dan Doa</div></h2>
       <ul>
-        {data.list.map((post) => (
+        {data.list.map((formData) => (
         <li>
           <div class="noco-ucapan">
-            <div class="txt-b">{post.nama}</div>
-            {post.comment}
+            <div class="txt-b">{formData.nama}</div>
+            {formData.comment}
           </div>
           <div class="noco-kehadiran">
-            {post.rsvp}
+            {formData.rsvp}
           </div>
         </li>
         ))}

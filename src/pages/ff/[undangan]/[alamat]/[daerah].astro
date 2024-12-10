@@ -1,13 +1,8 @@
 ---
 import Layout from '../../../../layouts/layout.astro';
-import Form from '../../../../components/form.astro';
-//const res = await fetch (`${Astro.url}api/noco.json`);
-//const data = await res.json();
-
 const { undangan } = Astro.params;
 const { alamat } = Astro.params;
 const { daerah } = Astro.params;
-
 ---
 <Layout>
   <Fragment slot="slot-undangan">
@@ -23,5 +18,3 @@ const { daerah } = Astro.params;
     15.00 - 21.00
   </Fragment>
 </Layout>
-
-<!--<Form/>-->
