@@ -2,6 +2,7 @@
 import '../styles/privateList.scss'
 const res = await fetch (`${Astro.url.origin}/api/nocoFull.json`);
 const data = await res.json();
+const myJson = Astro.locals.runtime.env.NOCO_URL;
 ---
 <html lang="en">
   <head>
@@ -20,6 +21,7 @@ const data = await res.json();
 
   <body>
     <div id="c-ucapan">
+      {myJson}
       <h2>Ucapan <div>dan Doa</div></h2>
       <ul>
         {data.list.map((post) => (
